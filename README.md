@@ -81,4 +81,4 @@ src/
 
 ## 📄 Licence
 
-Ce projet est la propriété exclusive de Ma'a Suh LLC.
+Ce projet est la propriété exclusive de Ma'a Suh LLC Creer par Raoul Flypsid.
