@@ -19,6 +19,24 @@ export default function Navbar() {
     FAQ: "#faq",
   };
 
+  // Gère le clic sur les liens de navigation (fix pour mobile)
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    setIsOpen(false);
+
+    // Petit délai pour permettre au menu de se fermer avant le scroll
+    setTimeout(() => {
+      const targetId = href.replace("#", "");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <nav className="sticky top-0 z-50 w-full bg-[#F3F5F7]/80 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-[1180px] items-center justify-between px-4 py-4 md:px-0 md:py-6">
@@ -79,13 +97,16 @@ export default function Navbar() {
                   key={item}
                   href={navLinks[item] || "#"}
                   className="text-base font-medium text-slate-600 hover:text-slate-900"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(e, navLinks[item] || "#")}
                 >
                   {item}
                 </a>
               ))}
               <div className="flex flex-col gap-3 pt-4">
-                <a href="#contact" onClick={() => setIsOpen(false)}>
+                <a
+                  href="#contact"
+                  onClick={(e) => handleNavClick(e, "#contact")}
+                >
                   <SoftButton>Contact</SoftButton>
                 </a>
               </div>
