@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Ma’a Suh LLC | Leader de l'Innovation Numérique B2B",
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

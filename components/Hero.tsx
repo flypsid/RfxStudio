@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { CreditCard, Bot, Store, Zap } from "lucide-react";
@@ -20,27 +18,7 @@ const Stat = ({ label, value }: StatProps) => (
   </div>
 );
 
-interface SoftButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-}
-
-const SoftButton = ({
-  children,
-  className = "",
-  ...props
-}: SoftButtonProps) => (
-  <button
-    className={
-      "rounded-full px-5 py-2.5 text-sm font-medium shadow-sm transition focus:outline-none focus:ring-2 focus:ring-offset-2 " +
-      "bg-emerald-900 text-white hover:bg-emerald-800 focus:ring-emerald-700 " +
-      className
-    }
-    {...props}
-  >
-    {children}
-  </button>
-);
+import { SoftButton } from "@/components/ui/SoftButton";
 
 function MiniBars() {
   return (
@@ -105,40 +83,13 @@ function Planet() {
 
 export default function MaasuhHero() {
   return (
-    <div className="min-h-screen w-full bg-[#F3F5F7]">
+    <div className="w-full bg-[#F3F5F7]">
       {/* Fonts */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
         :root { --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
         .font-jakarta { font-family: var(--font-sans); }
       `}</style>
-
-      {/* Top nav */}
-      <nav className="mx-auto flex w-full max-w-[1180px] items-center justify-between px-4 py-6 md:px-0">
-        <div className="flex items-center gap-3">
-          <Image
-            src="/images/logofull.webp"
-            alt="Ma'a Suh Logo"
-            width={150}
-            height={40}
-            className="h-10 w-auto object-contain"
-          />
-        </div>
-        <div className="hidden items-center gap-8 md:flex">
-          {["A propos", "Nos solutions", "Actualités", "FAQ"].map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="text-sm text-slate-600 hover:text-slate-900"
-            >
-              {item}
-            </a>
-          ))}
-        </div>
-        <div className="hidden gap-2 md:flex">
-          <SoftButton>Contact</SoftButton>
-        </div>
-      </nav>
 
       {/* Hero area */}
       <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-6 px-4 py-14 md:grid-cols-2 md:px-0">
@@ -177,8 +128,6 @@ export default function MaasuhHero() {
               <span className="font-semibold">Ma’a Suh Pay</span>
               <span className="font-semibold">MATHIE</span>
               <span className="font-semibold">AKO</span>
-              <span className="font-semibold">KONSO</span>
-              <span className="font-semibold">ALOGA</span>
             </div>
           </div>
         </div>

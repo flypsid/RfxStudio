@@ -164,19 +164,21 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   BASE STYLES
-═══════════════════════════════════════════════════════════════════════════ */
-html {
-  scroll-behavior: smooth;
-  background-color: var(--color-black);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    background-color: white;
+  }
 
-body {
-  font-family: var(--font-body);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  body {
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
 }
 
 h1,
