@@ -12,7 +12,7 @@ import {
 
 export default function About() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-12 md:py-24 bg-white overflow-hidden">
       <div className="mx-auto max-w-[1180px] px-4 md:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Image Area */}

@@ -92,7 +92,7 @@ export default function MaasuhHero() {
       `}</style>
 
       {/* Hero area */}
-      <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-6 px-4 py-14 md:grid-cols-2 md:px-0">
+      <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-6 px-4 py-8 md:py-14 md:grid-cols-2 md:px-0">
         {/* Left: headline */}
         <div className="flex flex-col justify-center space-y-8 pr-2">
           <div>

@@ -12,6 +12,13 @@ export function Navbar() {
   // Remplace "Actualités" par "Expertise" comme demandé
   const navItems = ["A propos", "Nos solutions", "Expertise", "FAQ"];
 
+  const navLinks: { [key: string]: string } = {
+    "A propos": "#about",
+    "Nos solutions": "#solutions",
+    Expertise: "#expertise",
+    FAQ: "#faq",
+  };
+
   return (
     <nav className="sticky top-0 z-50 w-full bg-[#F3F5F7]/80 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-[1180px] items-center justify-between px-4 py-4 md:px-0 md:py-6">
@@ -31,7 +38,7 @@ export function Navbar() {
           {navItems.map((item) => (
             <a
               key={item}
-              href={item === "A propos" ? "#about" : "#"}
+              href={navLinks[item] || "#"}
               className="text-sm font-medium text-slate-600 transition-colors hover:text-slate-900"
             >
               {item}
@@ -68,7 +75,7 @@ export function Navbar() {
               {navItems.map((item) => (
                 <a
                   key={item}
-                  href={item === "A propos" ? "#about" : "#"}
+                  href={navLinks[item] || "#"}
                   className="text-base font-medium text-slate-600 hover:text-slate-900"
                   onClick={() => setIsOpen(false)}
                 >
