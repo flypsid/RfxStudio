@@ -8,9 +8,39 @@ import {
   Users,
   TrendingUp,
   FileCheck,
+  LucideIcon,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+type FeatureKey =
+  | "innovation"
+  | "security"
+  | "ecosystem"
+  | "support"
+  | "scalability"
+  | "compliance";
+
+const featureIcons: Record<FeatureKey, LucideIcon> = {
+  innovation: Bot,
+  security: ShieldCheck,
+  ecosystem: Layers,
+  support: Users,
+  scalability: TrendingUp,
+  compliance: FileCheck,
+};
+
+const featureKeys: FeatureKey[] = [
+  "innovation",
+  "security",
+  "ecosystem",
+  "support",
+  "scalability",
+  "compliance",
+];
 
 export default function About() {
+  const t = useTranslations("About");
+
   return (
     <section className="py-12 md:py-24 bg-white overflow-hidden">
       <div className="mx-auto max-w-[1180px] px-4 md:px-0">
@@ -30,7 +60,7 @@ export default function About() {
                     <ShieldCheck size={20} />
                   </div>
                   <span className="font-semibold text-slate-800">
-                    Sécurité Avancée
+                    {t("decorative.security")}
                   </span>
                 </div>
                 <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
@@ -44,7 +74,7 @@ export default function About() {
                     <TrendingUp size={20} />
                   </div>
                   <span className="font-semibold text-slate-800">
-                    Croissance Continue
+                    {t("decorative.growth")}
                   </span>
                 </div>
                 <div className="flex items-end gap-1 h-8">
@@ -61,11 +91,11 @@ export default function About() {
                     <Bot size={20} />
                   </div>
                   <span className="font-semibold text-slate-800">
-                    IA Intégrée
+                    {t("decorative.ai")}
                   </span>
                 </div>
                 <p className="text-xs text-slate-500">
-                  Optimisation automatique des processus en temps réel.
+                  {t("decorative.aiDesc")}
                 </p>
               </div>
             </div>
@@ -78,41 +108,41 @@ export default function About() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              Pourquoi Ma&apos;a Suh ?
+              {t("badge")}
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-              Une technologie conçue pour <br />
+              {t("title")} <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-teal-500">
-                accélérer votre succès
+                {t("titleHighlight")}
               </span>
             </h2>
 
-            <p className="text-slate-600 text-lg mb-12">
-              Nous combinons expertise technique et vision business pour offrir
-              des solutions B2B qui transforment votre manière de travailler.
-            </p>
+            <p className="text-slate-600 text-lg mb-12">{t("description")}</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="flex gap-4 group">
-                  <div className="shrink-0">
-                    <div
-                      className={`p-3 rounded-xl bg-slate-50 border border-slate-100 group-hover:bg-emerald-50 group-hover:border-emerald-100 transition-colors duration-300`}
-                    >
-                      <feature.icon className="h-6 w-6 text-slate-600 group-hover:text-emerald-600 transition-colors" />
+              {featureKeys.map((key) => {
+                const Icon = featureIcons[key];
+                return (
+                  <div key={key} className="flex gap-4 group">
+                    <div className="shrink-0">
+                      <div
+                        className={`p-3 rounded-xl bg-slate-50 border border-slate-100 group-hover:bg-emerald-50 group-hover:border-emerald-100 transition-colors duration-300`}
+                      >
+                        <Icon className="h-6 w-6 text-slate-600 group-hover:text-emerald-600 transition-colors" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-slate-900 mb-1">
+                        {t(`features.${key}.title`)}
+                      </h3>
+                      <p className="text-sm text-slate-500 leading-relaxed">
+                        {t(`features.${key}.description`)}
+                      </p>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm text-slate-500 leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
@@ -120,38 +150,3 @@ export default function About() {
     </section>
   );
 }
-
-const features = [
-  {
-    icon: Bot,
-    title: "Innovation Continue",
-    description:
-      "Des outils propulsés par l'IA pour rester en avance sur le marché.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Sécurité Bancaire",
-    description:
-      "Infrastructure certifiée pour une protection maximale des données.",
-  },
-  {
-    icon: Layers,
-    title: "Écosystème Intégré",
-    description: "Fintech, SaaS et Retail connectés en une seule plateforme.",
-  },
-  {
-    icon: Users,
-    title: "Support Dédié",
-    description: "Une équipe d'experts disponible 24/7 pour vous accompagner.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Scalabilité",
-    description: "Des solutions qui grandissent au rythme de votre entreprise.",
-  },
-  {
-    icon: FileCheck,
-    title: "Conformité Simplifiée",
-    description: "Gestion automatisée des normes légales et RGPD.",
-  },
-];

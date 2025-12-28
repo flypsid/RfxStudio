@@ -1,0 +1,268 @@
+{
+  "Metadata": {
+    "title": "Ma'a Suh LLC | Leader de l'Innovation Numérique B2B",
+    "description": "Ma'a Suh LLC propose des solutions numériques innovantes : Fintech, SaaS, Retail, et Marketing Digital pour accompagner la croissance des entreprises."
+  },
+  "Navbar": {
+    "about": "A propos",
+    "solutions": "Nos solutions",
+    "expertise": "Expertise",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "LanguageSwitcher": {
+    "fr": "Français",
+    "en": "English"
+  },
+  "Hero": {
+    "title": "L'innovation numérique",
+    "titleHighlight": "au service de votre succès.",
+    "description": "Fintech, SaaS, Retail et IA : un écosystème complet pour",
+    "descriptionHighlight": "sécuriser vos actifs",
+    "descriptionEnd": ", optimiser votre gestion et automatiser votre croissance.",
+    "cta": "A propos de nous",
+    "stats": {
+      "experience": "Années d'Expérience",
+      "clients": "Clients Satisfaits",
+      "projects": "Projets Réalisés"
+    },
+    "building": "Building:",
+    "cards": {
+      "fintech": {
+        "label": "Fintech & Paiement",
+        "title": "Ma'a Suh Pay & Microfinance",
+        "subtitle": "transactions sécurisées"
+      },
+      "ai": {
+        "label": "Innovation IA",
+        "title": "Mathie : Automatisez",
+        "subtitle": "vos réseaux sociaux"
+      },
+      "saas": {
+        "label": "Gestion & SaaS",
+        "efficiency": "Efficacité",
+        "products": "AKO, CRM, ERP, Facturis"
+      },
+      "retail": {
+        "label": "Retail & Connectivité",
+        "title": "KONSO & Bantu Com's",
+        "subtitle": "connectez vos commerces"
+      }
+    }
+  },
+  "About": {
+    "badge": "Pourquoi Ma'a Suh ?",
+    "title": "Une technologie conçue pour",
+    "titleHighlight": "accélérer votre succès",
+    "description": "Nous combinons expertise technique et vision business pour offrir des solutions B2B qui transforment votre manière de travailler.",
+    "decorative": {
+      "security": "Sécurité Avancée",
+      "growth": "Croissance Continue",
+      "ai": "IA Intégrée",
+      "aiDesc": "Optimisation automatique des processus en temps réel."
+    },
+    "features": {
+      "innovation": {
+        "title": "Innovation Continue",
+        "description": "Des outils propulsés par l'IA pour rester en avance sur le marché."
+      },
+      "security": {
+        "title": "Sécurité Bancaire",
+        "description": "Infrastructure certifiée pour une protection maximale des données."
+      },
+      "ecosystem": {
+        "title": "Écosystème Intégré",
+        "description": "Fintech, SaaS et Retail connectés en une seule plateforme."
+      },
+      "support": {
+        "title": "Support Dédié",
+        "description": "Une équipe d'experts disponible 24/7 pour vous accompagner."
+      },
+      "scalability": {
+        "title": "Scalabilité",
+        "description": "Des solutions qui grandissent au rythme de votre entreprise."
+      },
+      "compliance": {
+        "title": "Conformité Simplifiée",
+        "description": "Gestion automatisée des normes légales et RGPD."
+      }
+    }
+  },
+  "Solutions": {
+    "badge": "Nos Solutions",
+    "title": "Un écosystème complet pour",
+    "titleHighlight": "propulser votre activité",
+    "description": "Des outils spécialisés pour chaque aspect de votre business, connectés et sécurisés.",
+    "discover": "Découvrir",
+    "items": {
+      "pay": {
+        "title": "Ma'a Suh Pay",
+        "description": "Solution de paiement tout-en-un pour vos transactions sécurisées."
+      },
+      "microfinance": {
+        "title": "Ma'a Suh Microfinance",
+        "description": "Solution phygitale pour la gestion financière et bancaire."
+      },
+      "crm": {
+        "title": "Ma'a Suh CRM & ERP",
+        "description": "Gestion complète de vos clients et ressources d'entreprise."
+      },
+      "shop": {
+        "title": "Ma'a Suh Shop & Retail",
+        "description": "Solution clé en main pour le commerce digital et retail."
+      },
+      "bantu": {
+        "title": "Bantu Com's",
+        "description": "Bulk SMS, emailing et WhatsApp Bulk pour votre marketing."
+      },
+      "aloga": {
+        "title": "ALOGA",
+        "description": "SaaS complet pour la location et la gestion locative."
+      },
+      "facturis": {
+        "title": "Facturis",
+        "description": "Logiciel de facturation intelligente et automatisée."
+      },
+      "mathie": {
+        "title": "Mathie",
+        "description": "Automatisation de vos réseaux sociaux propulsée par l'IA."
+      },
+      "ako": {
+        "title": "AKO",
+        "description": "Gestion de stock, point de vente (POS) et hôtellerie."
+      },
+      "konso": {
+        "title": "KONSO",
+        "description": "Le système qui connecte les commerçants aux fournisseurs."
+      }
+    }
+  },
+  "Expertise": {
+    "badge": "Notre Expertise Technique",
+    "title": "Une maîtrise technologique",
+    "titleHighlight": "de pointe",
+    "description": "Nous déployons les technologies les plus avancées pour bâtir des solutions robustes, scalables et sécurisées.",
+    "items": {
+      "dev": {
+        "category": "Développement",
+        "title": "Ingénierie Logicielle & Mobile",
+        "description": "Conception d'applications web et mobiles natives haute performance, offrant une expérience utilisateur fluide et intuitive.",
+        "features": ["React / Next.js", "React Native", "TypeScript", "Python"]
+      },
+      "ai": {
+        "category": "Intelligence Artificielle",
+        "title": "IA & Data Analytics",
+        "description": "Intégration de modèles d'IA avancés et analyse de données pour automatiser vos processus et éclairer vos décisions.",
+        "features": [
+          "LLM & Chatbots",
+          "Machine Learning",
+          "Analyse Prédictive",
+          "Automatisation"
+        ]
+      },
+      "cloud": {
+        "category": "Infrastructure",
+        "title": "Cloud & DevOps",
+        "description": "Architecture cloud résiliente et chaînes de déploiement automatisées pour garantir la disponibilité et la scalabilité de vos services.",
+        "features": [
+          "AWS / Azure",
+          "Docker & Kubernetes",
+          "CI/CD Pipelines",
+          "Serverless"
+        ]
+      },
+      "security": {
+        "category": "Sécurité",
+        "title": "Cybersécurité & Conformité",
+        "description": "Protection de vos actifs numériques avec des standards de sécurité bancaire et une conformité rigoureuse aux réglementations.",
+        "features": [
+          "Audits de Sécurité",
+          "Conformité RGPD/PCI",
+          "Chiffrement de bout en bout",
+          "Gestion des identités"
+        ]
+      }
+    }
+  },
+  "FAQ": {
+    "badge": "Support & Aide",
+    "title": "Questions Fréquentes",
+    "description": "Retrouvez les réponses aux questions les plus courantes sur nos solutions et services.",
+    "items": {
+      "integration": {
+        "question": "Comment intégrer Ma'a Suh Pay à mon site e-commerce ?",
+        "answer": "L'intégration est simple et rapide grâce à nos API robustes et bien documentées. Nous proposons également des plugins prêts à l'emploi pour les CMS majeurs (WooCommerce, Shopify, Magento). Notre équipe technique est disponible pour vous assister durant toute la phase d'intégration."
+      },
+      "security": {
+        "question": "Quels standards de sécurité appliquez-vous pour la protection des données ?",
+        "answer": "Nous appliquons une approche 'Security by Design'. Nos infrastructures sont certifiées ISO 27001 et nos solutions de paiement respectent strictement la norme PCI-DSS niveau 1. Toutes les données sensibles sont chiffrées de bout en bout (AES-256) et nous effectuons des tests d'intrusion (pentests) réguliers."
+      },
+      "support": {
+        "question": "Proposez-vous un support technique local ?",
+        "answer": "Oui, nous disposons d'une équipe de support dédiée et locale, disponible 24/7 pour nos clients Enterprise. Nous croyons en la proximité pour résoudre rapidement vos problématiques et garantir la continuité de vos opérations."
+      },
+      "crm": {
+        "question": "Quels sont les avantages de la suite Ma'a Suh CRM & ERP ?",
+        "answer": "Notre suite est conçue spécifiquement pour le contexte africain. Elle unifie la gestion de vos clients, de vos stocks, de votre comptabilité et de vos RH dans une interface unique. Cela vous permet d'avoir une vision 360° de votre activité, de réduire les erreurs manuelles et d'accélérer votre prise de décision."
+      },
+      "customization": {
+        "question": "Puis-je personnaliser les fonctionnalités selon mes besoins ?",
+        "answer": "Tout à fait. Bien que nos solutions SaaS soient prêtes à l'emploi, notre pôle 'Développement Sur Mesure' peut adapter chaque module aux processus spécifiques de votre entreprise ou développer des fonctionnalités exclusives pour vous donner un avantage concurrentiel."
+      }
+    }
+  },
+  "Contact": {
+    "badge": "Contactez-nous",
+    "title": "Une questions ? un devis ?",
+    "titleHighlight": "Parlons de votre projet",
+    "description": "Notre équipe internationale est à votre disposition pour vous accompagner.",
+    "offices": {
+      "title": "Nos bureaux dans le monde",
+      "usa": "Siège Social (USA)",
+      "cameroon": "Cameroun",
+      "congo": "Congo",
+      "canada": "Canada"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "subtitle": "Nous répondons généralement sous 24h ouvrées.",
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+33 ...",
+      "email": "Email professionnel",
+      "emailPlaceholder": "nom@entreprise.com",
+      "message": "Votre message",
+      "messagePlaceholder": "Comment pouvons-nous vous aider ?",
+      "submit": "Envoyer le message"
+    }
+  },
+  "Footer": {
+    "tagline": "L'innovation numérique au service de votre succès. Solutions Fintech, Retail et SaaS pour l'Afrique et le monde.",
+    "solutions": "Solutions",
+    "solutionsLinks": {
+      "pay": "Ma'a Suh Pay",
+      "microfinance": "Microfinance SaaS",
+      "retail": "Retail & POS",
+      "crm": "CRM & ERP",
+      "ai": "Intelligence Artificielle"
+    },
+    "company": "Entreprise",
+    "companyLinks": {
+      "about": "A propos",
+      "expertise": "Expertise",
+      "contact": "Contact",
+      "faq": "FAQ & Support"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Recevez nos dernières actualités et insights technologiques.",
+      "placeholder": "Votre email",
+      "subscribe": "S'inscrire"
+    },
+    "copyright": "Ma'a Suh LLC. Tous droits réservés.",
+    "legal": "Mentions Légales",
+    "privacy": "Confidentialité",
+    "builtBy": "Built by Flypsid"
+  }
+}

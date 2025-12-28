@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CreditCard, Bot, Store, Zap } from "lucide-react";
+import { SoftButton } from "@/components/ui/SoftButton";
+import { useTranslations } from "next-intl";
 
 interface StatProps {
   label: string;
@@ -17,8 +19,6 @@ const Stat = ({ label, value }: StatProps) => (
     <div className="text-sm text-slate-500">{label}</div>
   </div>
 );
-
-import { SoftButton } from "@/components/ui/SoftButton";
 
 function MiniBars() {
   return (
@@ -82,6 +82,8 @@ function Planet() {
 }
 
 export default function MaasuhHero() {
+  const t = useTranslations("Hero");
+
   return (
     <div className="w-full bg-[#F3F5F7]">
       {/* Fonts */}
@@ -92,40 +94,40 @@ export default function MaasuhHero() {
       `}</style>
 
       {/* Hero area */}
-      <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-6 px-4 py-8 md:py-14 md:grid-cols-2 md:px-0">
+      <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-6 px-4 py-8 md:py-14 md:grid-cols-2 xl:px-0">
         {/* Left: headline */}
         <div className="flex flex-col justify-center space-y-8 pr-2">
           <div>
             <h1 className="text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tight text-slate-900">
-              L&apos;innovation numérique
+              {t("title")}
               <br />
-              au service de votre succès.
+              {t("titleHighlight")}
             </h1>
             <p className="mt-4 max-w-md text-slate-600">
-              Fintech, SaaS, Retail et IA : un écosystème complet pour{" "}
+              {t("description")}{" "}
               <span className="font-medium text-slate-900">
-                sécuriser vos actifs
+                {t("descriptionHighlight")}
               </span>
-              , optimiser votre gestion et automatiser votre croissance.
+              {t("descriptionEnd")}
             </p>
           </div>
 
           <div className="flex items-center gap-4">
-            <SoftButton>A propos de nous</SoftButton>
+            <SoftButton>{t("cta")}</SoftButton>
           </div>
 
           <div className="grid grid-cols-3 gap-8 pt-2 md:max-w-xl">
-            <Stat label="Années d'Expérience" value="10+" />
-            <Stat label="Clients Satisfaits" value="500+" />
-            <Stat label="Projets Réalisés" value="1.2k" />
+            <Stat label={t("stats.experience")} value="10+" />
+            <Stat label={t("stats.clients")} value="500+" />
+            <Stat label={t("stats.projects")} value="1.2k" />
           </div>
 
           <div className="mt-6 flex items-center gap-8 opacity-70">
             <span className="text-xs text-slate-500 uppercase tracking-widest">
-              Building:
+              {t("building")}
             </span>
             <div className="flex items-center gap-6 text-slate-400">
-              <span className="font-semibold">Ma’a Suh Pay</span>
+              <span className="font-semibold">MS PAY</span>
               <span className="font-semibold">MATHIE</span>
               <span className="font-semibold">AKO</span>
             </div>
@@ -174,12 +176,13 @@ export default function MaasuhHero() {
                   <CreditCard className="h-5 w-5" />
                 </div>
                 <span className="text-xs uppercase tracking-wider text-emerald-200">
-                  Fintech & Paiement
+                  {t("cards.fintech.label")}
                 </span>
               </div>
               <div className="mt-6 text-xl leading-snug text-emerald-50/95">
-                Ma&apos;a Suh Pay & Microfinance
-                <br /> transactions sécurisées
+                {t("cards.fintech.title")}
+                <br />
+                {t("cards.fintech.subtitle")}
               </div>
               <motion.div
                 className="absolute right-6 top-6 h-12 w-12 rounded-full bg-emerald-600/40"
@@ -205,11 +208,11 @@ export default function MaasuhHero() {
               <Planet />
             </div>
             <div className="relative mt-24 flex items-center gap-2 text-sm text-white/90">
-              <Bot className="h-4 w-4" /> Innovation IA
+              <Bot className="h-4 w-4" /> {t("cards.ai.label")}
             </div>
             <div className="text-xl font-medium leading-snug">
-              Mathie : Automatisez
-              <br /> vos réseaux sociaux
+              {t("cards.ai.title")}
+              <br /> {t("cards.ai.subtitle")}
             </div>
           </motion.div>
 
@@ -220,15 +223,17 @@ export default function MaasuhHero() {
             transition={{ delay: 0.3 }}
             className="col-span-1 rounded-xl bg-white p-6 text-slate-800 shadow-lg ring-1 ring-slate-200"
           >
-            <div className="text-sm text-slate-500">Gestion &amp; SaaS</div>
+            <div className="text-sm text-slate-500">
+              {t("cards.saas.label")}
+            </div>
             <div className="mt-2 text-3xl font-semibold tracking-tight">
               +150%{" "}
               <span className="text-sm font-medium text-slate-400 align-middle">
-                Efficacité
+                {t("cards.saas.efficiency")}
               </span>
             </div>
             <div className="mt-1 text-xs text-emerald-600">
-              ↑ AKO, CRM, ERP, Facturis
+              ↑ {t("cards.saas.products")}
             </div>
             <MiniBars />
           </motion.div>
@@ -249,12 +254,12 @@ export default function MaasuhHero() {
                   <Store className="h-5 w-5" />
                 </div>
                 <span className="text-xs uppercase tracking-wider text-teal-100">
-                  Retail &amp; Connectivité
+                  {t("cards.retail.label")}
                 </span>
               </div>
               <div className="mt-20 text-xl leading-snug">
-                KONSO &amp; Bantu Com&apos;s
-                <br /> connectez vos commerces
+                {t("cards.retail.title")}
+                <br /> {t("cards.retail.subtitle")}
               </div>
             </div>
           </motion.div>

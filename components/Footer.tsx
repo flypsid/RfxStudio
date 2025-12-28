@@ -1,14 +1,17 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { Linkedin, Facebook, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-slate-900 pt-16 pb-8 text-slate-400">
-      <div className="mx-auto max-w-[1180px] px-4 md:px-0">
+      <div className="mx-auto max-w-[1180px] px-4 xl:px-0">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4 lg:gap-8 mb-16">
           {/* Brand Column */}
           <div className="md:col-span-1">
@@ -24,10 +27,7 @@ export default function Footer() {
                 Ma&apos;a Suh
               </span>
             </Link>
-            <p className="text-sm leading-relaxed mb-6">
-              L&apos;innovation numérique au service de votre succès. Solutions
-              Fintech, Retail et SaaS pour l&apos;Afrique et le monde.
-            </p>
+            <p className="text-sm leading-relaxed mb-6">{t("tagline")}</p>
             <div className="flex gap-4">
               <a
                 href="https://x.com/"
@@ -64,14 +64,14 @@ export default function Footer() {
 
           {/* Solutions Links */}
           <div>
-            <h4 className="text-white font-bold mb-6">Solutions</h4>
+            <h4 className="text-white font-bold mb-6">{t("solutions")}</h4>
             <ul className="space-y-4 text-sm">
               <li>
                 <a
                   href="#solutions"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Ma&apos;a Suh Pay
+                  {t("solutionsLinks.pay")}
                 </a>
               </li>
               <li>
@@ -79,7 +79,7 @@ export default function Footer() {
                   href="#solutions"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Microfinance SaaS
+                  {t("solutionsLinks.microfinance")}
                 </a>
               </li>
               <li>
@@ -87,7 +87,7 @@ export default function Footer() {
                   href="#solutions"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Retail & POS
+                  {t("solutionsLinks.retail")}
                 </a>
               </li>
               <li>
@@ -95,7 +95,7 @@ export default function Footer() {
                   href="#solutions"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  CRM & ERP
+                  {t("solutionsLinks.crm")}
                 </a>
               </li>
               <li>
@@ -103,7 +103,7 @@ export default function Footer() {
                   href="#solutions"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Intelligence Artificielle
+                  {t("solutionsLinks.ai")}
                 </a>
               </li>
             </ul>
@@ -111,14 +111,14 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-white font-bold mb-6">Entreprise</h4>
+            <h4 className="text-white font-bold mb-6">{t("company")}</h4>
             <ul className="space-y-4 text-sm">
               <li>
                 <a
                   href="#about"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  A propos
+                  {t("companyLinks.about")}
                 </a>
               </li>
               <li>
@@ -126,7 +126,7 @@ export default function Footer() {
                   href="#expertise"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Expertise
+                  {t("companyLinks.expertise")}
                 </a>
               </li>
               <li>
@@ -134,7 +134,7 @@ export default function Footer() {
                   href="#contact"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Contact
+                  {t("companyLinks.contact")}
                 </a>
               </li>
               <li>
@@ -142,7 +142,7 @@ export default function Footer() {
                   href="#faq"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  FAQ & Support
+                  {t("companyLinks.faq")}
                 </a>
               </li>
             </ul>
@@ -150,18 +150,18 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-white font-bold mb-6">Newsletter</h4>
-            <p className="text-sm mb-4">
-              Recevez nos dernières actualités et insights technologiques.
-            </p>
+            <h4 className="text-white font-bold mb-6">
+              {t("newsletter.title")}
+            </h4>
+            <p className="text-sm mb-4">{t("newsletter.description")}</p>
             <form className="flex flex-col gap-2">
               <input
                 type="email"
-                placeholder="Votre email"
+                placeholder={t("newsletter.placeholder")}
                 className="bg-slate-800 border-slate-700 text-white placeholder-slate-500 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500 border"
               />
               <button className="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2">
-                S&apos;inscrire
+                {t("newsletter.subscribe")}
                 <ArrowRight className="h-4 w-4" />
               </button>
             </form>
@@ -170,24 +170,23 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <div>
-            &copy; {new Date().getFullYear()} Ma&apos;a Suh LLC. Tous droits
-            réservés.
+            &copy; {new Date().getFullYear()} {t("copyright")}
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <a href="#" className="hover:text-emerald-400 transition-colors">
-              Mentions Légales
+              {t("legal")}
             </a>
             <a href="#" className="hover:text-emerald-400 transition-colors">
-              Confidentialité
+              {t("privacy")}
             </a>
             <a
               href="https://rfx.life"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 hover:text-emerald-400 transition-colors"
+              className="flex items-center gap-1 hover:text-emerald-400 transition-colors basis-full sm:basis-auto justify-center sm:justify-start"
               title="Développement Web & IA"
             >
-              Built by Flypsid
+              {t("builtBy")}
             </a>
           </div>
         </div>

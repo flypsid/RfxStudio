@@ -12,8 +12,11 @@ import {
   Linkedin,
   Facebook,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+  const t = useTranslations("Contact");
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Logic backend would go here
@@ -21,21 +24,18 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-12 md:py-24 bg-white">
-      <div className="mx-auto max-w-[1180px] px-4 md:px-0">
+      <div className="mx-auto max-w-[1180px] px-4 xl:px-0">
         <div className="mb-16 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-4">
-            Contactez-nous
+            {t("badge")}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Une questions ? un devis ? <br />
+            {t("title")} <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-teal-500">
-              Parlons de votre projet
+              {t("titleHighlight")}
             </span>
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
-            Notre équipe internationale est à votre disposition pour vous
-            accompagner.
-          </p>
+          <p className="text-slate-600 max-w-2xl mx-auto">{t("description")}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
@@ -43,7 +43,7 @@ export default function Contact() {
           <div className="flex flex-col h-full bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-10 justify-between">
             <div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-8">
-                Nos bureaux dans le monde
+                {t("offices.title")}
               </h3>
 
               <div className="space-y-8">
@@ -56,7 +56,7 @@ export default function Contact() {
                       alt="USA"
                       className="rounded-sm object-cover"
                     />
-                    Siège Social (USA)
+                    {t("offices.usa")}
                   </h4>
                   <div className="pl-8 space-y-1.5 text-sm md:text-base text-slate-600">
                     <p className="flex items-start gap-2">
@@ -89,7 +89,7 @@ export default function Contact() {
                       alt="Cameroun"
                       className="rounded-sm object-cover"
                     />
-                    Cameroun
+                    {t("offices.cameroon")}
                   </h4>
                   <div className="pl-8 space-y-1.5 text-sm md:text-base text-slate-600">
                     <p className="flex items-start gap-2">
@@ -114,7 +114,7 @@ export default function Contact() {
                       alt="Congo"
                       className="rounded-sm object-cover"
                     />
-                    Congo
+                    {t("offices.congo")}
                   </h4>
                   <div className="pl-8 space-y-1.5 text-sm md:text-base text-slate-600">
                     <p className="flex items-start gap-2">
@@ -139,7 +139,7 @@ export default function Contact() {
                       alt="Canada"
                       className="rounded-sm object-cover"
                     />
-                    Canada
+                    {t("offices.canada")}
                   </h4>
                   <div className="pl-8 space-y-1.5 text-sm md:text-base text-slate-600">
                     <p className="flex items-start gap-2">
@@ -220,11 +220,9 @@ export default function Contact() {
             <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-60 h-60 bg-teal-600 rounded-full opacity-20 blur-3xl"></div>
 
             <div className="relative z-10 flex flex-col h-full">
-              <h3 className="text-2xl font-semibold mb-2">
-                Envoyez-nous un message
-              </h3>
+              <h3 className="text-2xl font-semibold mb-2">{t("form.title")}</h3>
               <p className="text-emerald-100 mb-8 text-sm">
-                Nous répondons généralement sous 24h ouvrées.
+                {t("form.subtitle")}
               </p>
 
               <form
@@ -237,7 +235,7 @@ export default function Contact() {
                       htmlFor="name"
                       className="text-xs font-medium text-emerald-200 ml-1"
                     >
-                      Nom complet
+                      {t("form.name")}
                     </label>
                     <div className="relative">
                       <User className="absolute left-3 top-3 h-5 w-5 text-emerald-700" />
@@ -245,7 +243,7 @@ export default function Contact() {
                         type="text"
                         id="name"
                         className="w-full bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-2.5 pl-10 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
-                        placeholder="Votre nom"
+                        placeholder={t("form.namePlaceholder")}
                       />
                     </div>
                   </div>
@@ -254,7 +252,7 @@ export default function Contact() {
                       htmlFor="phone"
                       className="text-xs font-medium text-emerald-200 ml-1"
                     >
-                      Téléphone
+                      {t("form.phone")}
                     </label>
                     <div className="relative">
                       <Smartphone className="absolute left-3 top-3 h-5 w-5 text-emerald-700" />
@@ -262,7 +260,7 @@ export default function Contact() {
                         type="tel"
                         id="phone"
                         className="w-full bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-2.5 pl-10 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
-                        placeholder="+33 ..."
+                        placeholder={t("form.phonePlaceholder")}
                       />
                     </div>
                   </div>
@@ -273,7 +271,7 @@ export default function Contact() {
                     htmlFor="email"
                     className="text-xs font-medium text-emerald-200 ml-1"
                   >
-                    Email professionnel
+                    {t("form.email")}
                   </label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-3 h-5 w-5 text-emerald-700" />
@@ -281,7 +279,7 @@ export default function Contact() {
                       type="email"
                       id="email"
                       className="w-full bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-2.5 pl-10 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
-                      placeholder="nom@entreprise.com"
+                      placeholder={t("form.emailPlaceholder")}
                     />
                   </div>
                 </div>
@@ -291,12 +289,12 @@ export default function Contact() {
                     htmlFor="message"
                     className="text-xs font-medium text-emerald-200 ml-1"
                   >
-                    Votre message
+                    {t("form.message")}
                   </label>
                   <textarea
                     id="message"
                     className="w-full grow bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-3 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all min-h-[120px]"
-                    placeholder="Comment pouvons-nous vous aider ?"
+                    placeholder={t("form.messagePlaceholder")}
                   ></textarea>
                 </div>
 
@@ -304,7 +302,7 @@ export default function Contact() {
                   type="submit"
                   className="mt-4 w-full bg-white text-emerald-900 font-bold py-3 px-6 rounded-xl hover:bg-emerald-50 transition-colors flex items-center justify-center gap-2 group"
                 >
-                  Envoyer le message
+                  {t("form.submit")}
                   <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>

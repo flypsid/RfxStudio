@@ -5,19 +5,19 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { SoftButton } from "@/components/ui/SoftButton";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("Navbar");
 
-  // Remplace "Actualités" par "Expertise" comme demandé
-  const navItems = ["A propos", "Nos solutions", "Expertise", "FAQ"];
-
-  const navLinks: { [key: string]: string } = {
-    "A propos": "#about",
-    "Nos solutions": "#solutions",
-    Expertise: "#expertise",
-    FAQ: "#faq",
-  };
+  const navItems = [
+    { key: "about", href: "#about" },
+    { key: "solutions", href: "#solutions" },
+    { key: "expertise", href: "#expertise" },
+    { key: "faq", href: "#faq" },
+  ];
 
   // Gère le clic sur les liens de navigation (fix pour mobile)
   const handleNavClick = (
@@ -39,7 +39,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-[#F3F5F7]/80 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-[1180px] items-center justify-between px-4 py-4 md:px-0 md:py-6">
+      <div className="mx-auto flex w-full max-w-[1180px] items-center justify-between px-4 py-4 xl:px-0 md:py-6">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3">
           <Image
@@ -55,24 +55,26 @@ export default function Navbar() {
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <a
-              key={item}
-              href={navLinks[item] || "#"}
+              key={item.key}
+              href={item.href}
               className="text-sm font-medium text-slate-600 transition-colors hover:text-slate-900"
             >
-              {item}
+              {t(item.key as "about" | "solutions" | "expertise" | "faq")}
             </a>
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden gap-2 md:flex">
+        {/* Desktop CTA + Language Switcher */}
+        <div className="hidden items-center gap-4 md:flex">
+          <LanguageSwitcher />
           <a href="#contact">
-            <SoftButton>Contact</SoftButton>
+            <SoftButton>{t("contact")}</SoftButton>
           </a>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden">
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher />
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-slate-600 hover:text-slate-900 focus:outline-none"
@@ -94,12 +96,12 @@ export default function Navbar() {
             <div className="flex flex-col space-y-4 px-6 py-6 text-center">
               {navItems.map((item) => (
                 <a
-                  key={item}
-                  href={navLinks[item] || "#"}
+                  key={item.key}
+                  href={item.href}
                   className="text-base font-medium text-slate-600 hover:text-slate-900"
-                  onClick={(e) => handleNavClick(e, navLinks[item] || "#")}
+                  onClick={(e) => handleNavClick(e, item.href)}
                 >
-                  {item}
+                  {t(item.key as "about" | "solutions" | "expertise" | "faq")}
                 </a>
               ))}
               <div className="flex flex-col gap-3 pt-4">
@@ -107,7 +109,7 @@ export default function Navbar() {
                   href="#contact"
                   onClick={(e) => handleNavClick(e, "#contact")}
                 >
-                  <SoftButton>Contact</SoftButton>
+                  <SoftButton>{t("contact")}</SoftButton>
                 </a>
               </div>
             </div>

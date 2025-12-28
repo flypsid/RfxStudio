@@ -1,3 +1,4 @@
+import { setRequestLocale } from "next-intl/server";
 import MaasuhHero from "@/components/Hero";
 import About from "@/components/about";
 import Solutions from "@/components/Solutions";
@@ -5,7 +6,14 @@ import Expertise from "@/components/Expertise";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 
-const Home = () => {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <main className="min-h-screen">
       <section id="hero">
@@ -28,6 +36,4 @@ const Home = () => {
       </section>
     </main>
   );
-};
-
-export default Home;
+}
