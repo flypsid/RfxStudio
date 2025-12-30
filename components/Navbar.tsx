@@ -41,7 +41,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full bg-[#F3F5F7]/80 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-[1180px] items-center justify-between px-4 py-4 xl:px-0 md:py-6">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-3">
+        <a href="./" className="flex items-center gap-3">
           <Image
             src="/images/logofull.webp"
             alt="Ma'a Suh Logo"

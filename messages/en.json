@@ -263,6 +263,133 @@
     "copyright": "Ma'a Suh LLC. All rights reserved.",
     "legal": "Legal Notice",
     "privacy": "Privacy",
+    "terms": "Terms",
     "builtBy": "Built by Flypsid"
+  },
+  "Legal": {
+    "title": "Legal Notice",
+    "lastUpdate": "Last updated",
+    "editor": {
+      "title": "Site Editor",
+      "company": "Ma'a Suh LLC",
+      "form": "Limited Liability Company (LLC)",
+      "headquarters": "Headquarters",
+      "address": "United States",
+      "email": "Email",
+      "emailValue": "contact@maasuh.com"
+    },
+    "directors": {
+      "title": "Management",
+      "ceo": "CEO Founder",
+      "ceoName": "Narcisse Fokou",
+      "cto": "CTO Co-founder",
+      "ctoName": "Fokou Donald",
+      "publication": "Publication Director",
+      "publicationName": "Narcisse Fokou"
+    },
+    "hosting": {
+      "title": "Hosting",
+      "provider": "Self-hosted VPS Server",
+      "location": "Private Infrastructure"
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content": "All content on this site (texts, images, logos, videos, graphics) is protected by intellectual property laws. Any unauthorized reproduction, representation, modification or exploitation is prohibited."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "content": "Ma'a Suh LLC strives to provide accurate and up-to-date information on this site. However, we cannot guarantee the accuracy, completeness or timeliness of the information provided. Use of information from the site is at the user's sole risk."
+    }
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "lastUpdate": "Last updated",
+    "intro": "Ma'a Suh LLC is committed to protecting the privacy of its users. This policy explains how we collect, use and protect your personal data.",
+    "collection": {
+      "title": "Data Collected",
+      "content": "We collect the following data:",
+      "items": {
+        "contact": "Contact information (name, email, phone) via our contact form",
+        "newsletter": "Email address for newsletter subscription",
+        "navigation": "Navigation data (cookies, IP address) to improve user experience"
+      }
+    },
+    "usage": {
+      "title": "Use of Data",
+      "content": "Your data is used to:",
+      "items": {
+        "respond": "Respond to your contact requests",
+        "newsletter": "Send you our newsletter (with your consent)",
+        "improve": "Improve our services and website",
+        "legal": "Comply with our legal obligations"
+      }
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "We use cookies to improve your browsing experience. You can manage your preferences via the cookie banner or your browser settings.",
+      "types": {
+        "essential": "Essential cookies: necessary for site operation",
+        "analytics": "Analytics cookies: help us understand how you use the site"
+      }
+    },
+    "rights": {
+      "title": "Your Rights (GDPR)",
+      "content": "In accordance with GDPR, you have the following rights:",
+      "items": {
+        "access": "Right to access your personal data",
+        "rectification": "Right to rectify inaccurate data",
+        "deletion": "Right to deletion of your data",
+        "portability": "Right to data portability",
+        "opposition": "Right to object to processing"
+      },
+      "contact": "To exercise these rights, contact us at"
+    },
+    "security": {
+      "title": "Data Security",
+      "content": "We implement technical and organizational security measures to protect your personal data against unauthorized access, modification, disclosure or destruction."
+    },
+    "retention": {
+      "title": "Data Retention",
+      "content": "Your data is retained for the duration necessary for the purposes for which it was collected, and in accordance with applicable legislation."
+    }
+  },
+  "Terms": {
+    "title": "Terms of Use",
+    "lastUpdate": "Last updated",
+    "intro": "By accessing this site, you accept these terms of use. If you do not accept these terms, please do not use this site.",
+    "object": {
+      "title": "Purpose of the Site",
+      "content": "This site aims to present Ma'a Suh LLC and its innovative digital solutions (Fintech, SaaS, Retail, AI). It is a showcase site intended to inform visitors about our services."
+    },
+    "access": {
+      "title": "Access to the Site",
+      "content": "Access to the site is free. All costs related to accessing the site (computer equipment, software, internet connection) are borne by the user."
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content": "All elements of the site (texts, images, logos, icons, sounds, software, etc.) are the exclusive property of Ma'a Suh LLC or its partners. Any reproduction, representation, modification, publication or adaptation is prohibited without prior authorization."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "content": "Ma'a Suh LLC cannot be held responsible for direct or indirect damages resulting from access to or use of the site, including inaccessibility, data loss, intrusions or viruses."
+    },
+    "links": {
+      "title": "External Links",
+      "content": "This site may contain links to third-party sites. Ma'a Suh LLC has no control over these sites and disclaims any responsibility for their content."
+    },
+    "modification": {
+      "title": "Modification of Terms",
+      "content": "Ma'a Suh LLC reserves the right to modify these terms at any time. Modifications take effect upon publication on the site."
+    },
+    "law": {
+      "title": "Applicable Law",
+      "content": "These terms are governed by United States law. Any dispute shall be subject to the exclusive jurisdiction of the competent courts."
+    }
+  },
+  "CookieBanner": {
+    "message": "We use cookies to improve your experience on our site.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "refuse": "Refuse"
   }
 }

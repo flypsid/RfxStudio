@@ -173,12 +173,24 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {t("copyright")}
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <a href="#" className="hover:text-emerald-400 transition-colors">
+            <Link
+              href="/legal"
+              className="hover:text-emerald-400 transition-colors"
+            >
               {t("legal")}
-            </a>
-            <a href="#" className="hover:text-emerald-400 transition-colors">
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-emerald-400 transition-colors"
+            >
               {t("privacy")}
-            </a>
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-emerald-400 transition-colors"
+            >
+              {t("terms")}
+            </Link>
             <a
               href="https://rfx.life"
               target="_blank"

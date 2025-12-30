@@ -263,6 +263,133 @@
     "copyright": "Ma'a Suh LLC. Tous droits réservés.",
     "legal": "Mentions Légales",
     "privacy": "Confidentialité",
+    "terms": "CGU",
     "builtBy": "Built by Flypsid"
+  },
+  "Legal": {
+    "title": "Mentions Légales",
+    "lastUpdate": "Dernière mise à jour",
+    "editor": {
+      "title": "Éditeur du site",
+      "company": "Ma'a Suh LLC",
+      "form": "Société à responsabilité limitée (LLC)",
+      "headquarters": "Siège social",
+      "address": "États-Unis",
+      "email": "Email",
+      "emailValue": "contact@maasuh.com"
+    },
+    "directors": {
+      "title": "Direction",
+      "ceo": "CEO Fondateur",
+      "ceoName": "Narcisse Fokou",
+      "cto": "CTO Co-fondateur",
+      "ctoName": "Fokou Donald",
+      "publication": "Directeur de publication",
+      "publicationName": "Narcisse Fokou"
+    },
+    "hosting": {
+      "title": "Hébergement",
+      "provider": "Serveur VPS auto-hébergé",
+      "location": "Infrastructure privée"
+    },
+    "intellectual": {
+      "title": "Propriété intellectuelle",
+      "content": "L'ensemble du contenu de ce site (textes, images, logos, vidéos, graphismes) est protégé par les lois relatives à la propriété intellectuelle. Toute reproduction, représentation, modification ou exploitation non autorisée est interdite."
+    },
+    "liability": {
+      "title": "Limitation de responsabilité",
+      "content": "Ma'a Suh LLC s'efforce de fournir des informations exactes et à jour sur ce site. Toutefois, nous ne pouvons garantir l'exactitude, l'exhaustivité ou l'actualité des informations diffusées. L'utilisation des informations du site se fait sous la responsabilité exclusive de l'utilisateur."
+    }
+  },
+  "Privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdate": "Dernière mise à jour",
+    "intro": "Ma'a Suh LLC s'engage à protéger la vie privée de ses utilisateurs. Cette politique explique comment nous collectons, utilisons et protégeons vos données personnelles.",
+    "collection": {
+      "title": "Données collectées",
+      "content": "Nous collectons les données suivantes :",
+      "items": {
+        "contact": "Informations de contact (nom, email, téléphone) via notre formulaire de contact",
+        "newsletter": "Adresse email pour l'inscription à notre newsletter",
+        "navigation": "Données de navigation (cookies, adresse IP) pour améliorer l'expérience utilisateur"
+      }
+    },
+    "usage": {
+      "title": "Utilisation des données",
+      "content": "Vos données sont utilisées pour :",
+      "items": {
+        "respond": "Répondre à vos demandes de contact",
+        "newsletter": "Vous envoyer notre newsletter (avec votre consentement)",
+        "improve": "Améliorer nos services et notre site web",
+        "legal": "Respecter nos obligations légales"
+      }
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "Nous utilisons des cookies pour améliorer votre expérience de navigation. Vous pouvez gérer vos préférences via la bannière de cookies ou les paramètres de votre navigateur.",
+      "types": {
+        "essential": "Cookies essentiels : nécessaires au fonctionnement du site",
+        "analytics": "Cookies analytiques : nous aident à comprendre comment vous utilisez le site"
+      }
+    },
+    "rights": {
+      "title": "Vos droits (RGPD)",
+      "content": "Conformément au RGPD, vous disposez des droits suivants :",
+      "items": {
+        "access": "Droit d'accès à vos données personnelles",
+        "rectification": "Droit de rectification des données inexactes",
+        "deletion": "Droit à l'effacement de vos données",
+        "portability": "Droit à la portabilité de vos données",
+        "opposition": "Droit d'opposition au traitement"
+      },
+      "contact": "Pour exercer ces droits, contactez-nous à"
+    },
+    "security": {
+      "title": "Sécurité des données",
+      "content": "Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles pour protéger vos données personnelles contre tout accès non autorisé, modification, divulgation ou destruction."
+    },
+    "retention": {
+      "title": "Conservation des données",
+      "content": "Vos données sont conservées pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées, et conformément à la législation applicable."
+    }
+  },
+  "Terms": {
+    "title": "Conditions Générales d'Utilisation",
+    "lastUpdate": "Dernière mise à jour",
+    "intro": "En accédant à ce site, vous acceptez les présentes conditions générales d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ce site.",
+    "object": {
+      "title": "Objet du site",
+      "content": "Ce site a pour objet de présenter Ma'a Suh LLC et ses solutions numériques innovantes (Fintech, SaaS, Retail, IA). Il s'agit d'un site vitrine destiné à informer les visiteurs sur nos services."
+    },
+    "access": {
+      "title": "Accès au site",
+      "content": "L'accès au site est gratuit. Tous les coûts relatifs à l'accès au site (matériel informatique, logiciels, connexion internet) sont à la charge de l'utilisateur."
+    },
+    "intellectual": {
+      "title": "Propriété intellectuelle",
+      "content": "Tous les éléments du site (textes, images, logos, icônes, sons, logiciels, etc.) sont la propriété exclusive de Ma'a Suh LLC ou de ses partenaires. Toute reproduction, représentation, modification, publication ou adaptation est interdite sans autorisation préalable."
+    },
+    "liability": {
+      "title": "Limitation de responsabilité",
+      "content": "Ma'a Suh LLC ne saurait être tenue responsable des dommages directs ou indirects résultant de l'accès ou de l'utilisation du site, y compris l'inaccessibilité, les pertes de données, les intrusions ou virus."
+    },
+    "links": {
+      "title": "Liens externes",
+      "content": "Ce site peut contenir des liens vers des sites tiers. Ma'a Suh LLC n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu."
+    },
+    "modification": {
+      "title": "Modification des CGU",
+      "content": "Ma'a Suh LLC se réserve le droit de modifier les présentes conditions à tout moment. Les modifications entrent en vigueur dès leur publication sur le site."
+    },
+    "law": {
+      "title": "Droit applicable",
+      "content": "Les présentes conditions sont régies par le droit américain. Tout litige sera soumis à la compétence exclusive des tribunaux compétents."
+    }
+  },
+  "CookieBanner": {
+    "message": "Nous utilisons des cookies pour améliorer votre expérience sur notre site.",
+    "learnMore": "En savoir plus",
+    "accept": "Accepter",
+    "refuse": "Refuser"
   }
 }
