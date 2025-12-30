@@ -1,13 +1,35 @@
 "use client";
 
-import React from "react";
-import { Linkedin, Facebook, ArrowRight } from "lucide-react";
+import React, { useActionState, useEffect } from "react";
+import { Linkedin, Facebook, ArrowRight, Loader2 } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { subscribeNewsletter } from "@/lib/actions";
+import { toast } from "sonner";
+
+const initialState = {
+  success: false,
+  message: "",
+  errors: {},
+};
 
 export default function Footer() {
   const t = useTranslations("Footer");
+  const [state, formAction, isPending] = useActionState(
+    subscribeNewsletter,
+    initialState
+  );
+
+  useEffect(() => {
+    if (state.message) {
+      if (state.success) {
+        toast.success(state.message);
+      } else {
+        toast.error(state.message);
+      }
+    }
+  }, [state]);
 
   return (
     <footer className="bg-slate-900 pt-16 pb-8 text-slate-400">
@@ -154,15 +176,28 @@ export default function Footer() {
               {t("newsletter.title")}
             </h4>
             <p className="text-sm mb-4">{t("newsletter.description")}</p>
-            <form className="flex flex-col gap-2">
+            <form action={formAction} className="flex flex-col gap-2">
               <input
                 type="email"
+                name="email"
+                required
+                disabled={isPending}
                 placeholder={t("newsletter.placeholder")}
-                className="bg-slate-800 border-slate-700 text-white placeholder-slate-500 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500 border"
+                className="bg-slate-800 border-slate-700 text-white placeholder-slate-500 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500 border disabled:opacity-50"
               />
-              <button className="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2">
-                {t("newsletter.subscribe")}
-                <ArrowRight className="h-4 w-4" />
+              <button
+                type="submit"
+                disabled={isPending}
+                className="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {isPending ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <>
+                    {t("newsletter.subscribe")}
+                    <ArrowRight className="h-4 w-4" />
+                  </>
+                )}
               </button>
             </form>
           </div>

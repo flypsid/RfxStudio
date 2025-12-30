@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useActionState, useEffect } from "react";
 import Image from "next/image";
 import {
   Mail,
@@ -11,16 +11,34 @@ import {
   Smartphone,
   Linkedin,
   Facebook,
+  Loader2,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { submitContactForm } from "@/lib/actions";
+import { toast } from "sonner";
+
+const initialState = {
+  success: false,
+  message: "",
+  errors: {},
+};
 
 export default function Contact() {
   const t = useTranslations("Contact");
+  const [state, formAction, isPending] = useActionState(
+    submitContactForm,
+    initialState
+  );
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Logic backend would go here
-  };
+  useEffect(() => {
+    if (state.message) {
+      if (state.success) {
+        toast.success(state.message);
+      } else {
+        toast.error(state.message);
+      }
+    }
+  }, [state]);
 
   return (
     <section id="contact" className="py-12 md:py-24 bg-white">
@@ -225,10 +243,7 @@ export default function Contact() {
                 {t("form.subtitle")}
               </p>
 
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col gap-4 grow"
-              >
+              <form action={formAction} className="flex flex-col gap-4 grow">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label
@@ -241,8 +256,11 @@ export default function Contact() {
                       <User className="absolute left-3 top-3 h-5 w-5 text-emerald-700" />
                       <input
                         type="text"
+                        name="name"
                         id="name"
-                        className="w-full bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-2.5 pl-10 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
+                        required
+                        disabled={isPending}
+                        className="w-full bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-2.5 pl-10 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all disabled:opacity-50"
                         placeholder={t("form.namePlaceholder")}
                       />
                     </div>
@@ -258,8 +276,10 @@ export default function Contact() {
                       <Smartphone className="absolute left-3 top-3 h-5 w-5 text-emerald-700" />
                       <input
                         type="tel"
+                        name="phone"
                         id="phone"
-                        className="w-full bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-2.5 pl-10 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
+                        disabled={isPending}
+                        className="w-full bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-2.5 pl-10 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all disabled:opacity-50"
                         placeholder={t("form.phonePlaceholder")}
                       />
                     </div>
@@ -277,8 +297,11 @@ export default function Contact() {
                     <Mail className="absolute left-3 top-3 h-5 w-5 text-emerald-700" />
                     <input
                       type="email"
+                      name="email"
                       id="email"
-                      className="w-full bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-2.5 pl-10 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
+                      required
+                      disabled={isPending}
+                      className="w-full bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-2.5 pl-10 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all disabled:opacity-50"
                       placeholder={t("form.emailPlaceholder")}
                     />
                   </div>
@@ -292,18 +315,30 @@ export default function Contact() {
                     {t("form.message")}
                   </label>
                   <textarea
+                    name="message"
                     id="message"
-                    className="w-full grow bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-3 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all min-h-[120px]"
+                    required
+                    disabled={isPending}
+                    className="w-full grow bg-emerald-950/50 border border-emerald-800 rounded-xl px-4 py-3 text-white placeholder-emerald-700/50 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all min-h-[120px] disabled:opacity-50"
                     placeholder={t("form.messagePlaceholder")}
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="mt-4 w-full bg-white text-emerald-900 font-bold py-3 px-6 rounded-xl hover:bg-emerald-50 transition-colors flex items-center justify-center gap-2 group"
+                  disabled={isPending}
+                  className="mt-4 w-full bg-white text-emerald-900 font-bold py-3 px-6 rounded-xl hover:bg-emerald-50 transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {t("form.submit")}
-                  <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  {isPending ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      {t("form.submit")}
+                      <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
                 </button>
               </form>
             </div>

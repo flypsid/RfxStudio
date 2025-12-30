@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import type { Metadata } from "next";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
@@ -67,6 +68,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           {children}
           <Footer />
           <CookieBanner />
+          <Toaster position="top-center" richColors />
         </NextIntlClientProvider>
       </body>
     </html>
