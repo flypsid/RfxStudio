@@ -43,11 +43,11 @@ export default function Navbar() {
         {/* Logo */}
         <a href="./" className="flex items-center gap-3">
           <Image
-            src="/images/logofull.webp"
-            alt="Ma'a Suh Logo"
-            width={150}
-            height={40}
-            className="h-10 w-auto object-contain"
+            src="/images/Rfxstudio.png"
+            alt="Rfx Studio"
+            width={180}
+            height={48}
+            className="h-12 w-auto object-contain"
           />
         </a>
 

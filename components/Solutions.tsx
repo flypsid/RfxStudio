@@ -2,59 +2,50 @@
 
 import React from "react";
 import {
-  CreditCard,
-  Landmark,
-  Users,
-  ShoppingBag,
-  MessageSquare,
-  Key,
-  FileText,
-  Bot,
-  Box,
-  Store,
+  TrendingUp,
+  FileSearch,
+  Headphones,
+  Wallet,
+  Calculator,
+  Plane,
   ArrowRight,
   LucideIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 type SolutionKey =
-  | "pay"
-  | "microfinance"
-  | "crm"
-  | "shop"
-  | "bantu"
-  | "aloga"
-  | "facturis"
-  | "mathie"
-  | "ako"
-  | "konso";
+  | "viralis"
+  | "resumeiq"
+  | "relayon"
+  | "fusepay"
+  | "fiscally"
+  | "tripmind";
 
 const solutionIcons: Record<SolutionKey, LucideIcon> = {
-  pay: CreditCard,
-  microfinance: Landmark,
-  crm: Users,
-  shop: ShoppingBag,
-  bantu: MessageSquare,
-  aloga: Key,
-  facturis: FileText,
-  mathie: Bot,
-  ako: Box,
-  konso: Store,
+  viralis: TrendingUp,
+  resumeiq: FileSearch,
+  relayon: Headphones,
+  fusepay: Wallet,
+  fiscally: Calculator,
+  tripmind: Plane,
 };
 
-const solutionLinks: Partial<Record<SolutionKey, string>> = {};
+const solutionLinks: Record<SolutionKey, string> = {
+  viralis: "https://viralis.media/",
+  resumeiq: "https://resume.rfx.life/",
+  relayon: "#",
+  fusepay: "#",
+  fiscally: "#",
+  tripmind: "#",
+};
 
 const solutionKeys: SolutionKey[] = [
-  "pay",
-  "microfinance",
-  "crm",
-  "shop",
-  "bantu",
-  "aloga",
-  "facturis",
-  "mathie",
-  "ako",
-  "konso",
+  "viralis",
+  "resumeiq",
+  "relayon",
+  "fusepay",
+  "fiscally",
+  "tripmind",
 ];
 
 export default function Solutions() {
@@ -76,7 +67,7 @@ export default function Solutions() {
           <p className="text-slate-600 max-w-2xl mx-auto">{t("description")}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutionKeys.map((key) => {
             const Icon = solutionIcons[key];
             const link = solutionLinks[key];

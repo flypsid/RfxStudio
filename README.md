@@ -1,29 +1,26 @@
-# Ma'a Suh LLC - Plateforme Numérique B2B
+# Rfx Studio - Web & AI Infrastructure Provider
 
-Bienvenue sur le dépôt du site officiel de **Ma'a Suh LLC**. Ce projet est une plateforme vitrine moderne conçue pour présenter l'écosystème de solutions numériques B2B de Ma'a Suh (Fintech, SaaS, Retail, AI) à travers le monde.
+Bienvenue sur le dépôt du site officiel de **Rfx Studio**. Ce projet est une plateforme vitrine moderne conçue pour présenter l'écosystème de systèmes IA, Web & Blockchain de niveau entreprise.
 
 ## 🚀 À Propos
 
-Ma'a Suh accompagne la transformation digitale des entreprises en Afrique et à l'international grâce à une suite d'outils interconnectés :
+Rfx Studio conçoit des systèmes enterprise-grade qui alimentent les entreprises numériques modernes :
 
-- **Fintech** : Solutions de paiement et microfinance.
-- **SaaS** : CRM, ERP, et gestion locative (ALOGA).
-- **Retail** : Gestion de stock et POS pour commerces.
-- **IA** : Automatisation et analyse de données.
-
-Ce site a pour but de présenter ces offres, de renforcer la crédibilité technique de l'entreprise et de générer des leads qualifiés.
+- **Viralis** : Plateforme d'intelligence média pilotée par l'IA
+- **ResumeIQ** : Analyse de CV propulsée par l'intelligence artificielle
+- **RelayOn** : Support client IA nouvelle génération
+- **FusePay** : Processeur de paiement crypto
+- **Fiscally** : Gestion financière IA (factures, devis, budgets)
+- **Tripmind** : Planificateur de voyage IA (mobile)
 
 ## 🛠️ Stack Technique
 
-Ce projet utilise les dernières technologies web pour garantir performance, accessibilité et design moderne :
-
-- **Framework** : [Next.js 16](https://nextjs.org/) (App Router)
+- **Framework** : [Next.js 15](https://nextjs.org/) (App Router)
 - **Langage** : [TypeScript](https://www.typescriptlang.org/)
 - **Styling** : [Tailwind CSS 4](https://tailwindcss.com/)
-- **Icônes** : [Lucide React](https://lucide.dev/)
+- **Icônes** : [Lucide React](https://lucide.dev/) + [Tabler Icons](https://tabler.io/icons)
 - **Animations** : [Framer Motion](https://www.framer.com/motion/)
 - **Internationalisation** : [next-intl](https://next-intl.dev/) (Français / English)
-- **Optimisation Images** : `next/image`
 
 ## 🌍 Internationalisation (i18n)
 
@@ -44,14 +41,8 @@ Le site supporte **2 langues** avec détection automatique :
 ├── messages/
 │   ├── fr.json          # Traductions françaises
 │   └── en.json          # Traductions anglaises
-└── proxy.ts             # Middleware de routing
+└── middleware.ts        # Middleware de routing
 ```
-
-### Ajouter une traduction
-
-1. Ajouter la clé dans `messages/fr.json` et `messages/en.json`
-2. Utiliser `useTranslations("Namespace")` dans le composant
-3. Appeler `t("key")` pour afficher le texte
 
 ## 📂 Structure du Projet
 
@@ -59,10 +50,13 @@ Le site supporte **2 langues** avec détection automatique :
 ├── app/
 │   └── [locale]/        # Pages localisées (Next.js App Router)
 │       ├── layout.tsx   # Layout avec NextIntlClientProvider
-│       └── page.tsx     # Page principale
+│       ├── page.tsx     # Page principale
+│       ├── legal/       # Mentions légales
+│       ├── privacy/     # Politique de confidentialité
+│       └── terms/       # CGU
 ├── components/
 │   ├── ui/              # Composants UI génériques
-│   ├── LanguageSwitcher.tsx  # Sélecteur de langue
+│   ├── About.tsx        # Section À propos
 │   ├── Contact.tsx      # Section Contact & Localisation
 │   ├── Expertise.tsx    # Présentation des compétences
 │   ├── FAQ.tsx          # Foire aux Questions
@@ -80,8 +74,8 @@ Le site supporte **2 langues** avec détection automatique :
 1.  **Cloner le dépôt** :
 
     ```bash
-    git clone https://github.com/votre-org/maasuh.git
-    cd maasuh
+    git clone https://github.com/flypsid/rfxstudio.git
+    cd rfxstudio
     ```
 
 2.  **Installer les dépendances** :
@@ -97,21 +91,27 @@ Le site supporte **2 langues** avec détection automatique :
     ```
 
 4.  **Ouvrir le navigateur** :
-    Rendez-vous sur [http://localhost:3000](http://localhost:3000) — redirection automatique vers `/fr`.
+    Rendez-vous sur [http://localhost:3000](http://localhost:3000)
 
 ## ✨ Fonctionnalités Clés
 
-- **Internationalisation** : Support bilingue FR/EN avec sélecteur de langue.
-- **Navigation Global (Smooth Scroll)** : Accès rapide aux sections `#about`, `#solutions`, `#expertise`, et `#contact`.
-- **Design Responsive** : Optimisé pour mobile, tablette et desktop.
-- **Contenu International** : Support pour les bureaux USA, Cameroun, Congo, Canada.
-- **Composants Interactifs** : Menu mobile animé, accordéon FAQ, effets de survol.
+- **Internationalisation** : Support bilingue FR/EN avec sélecteur de langue
+- **Navigation Smooth Scroll** : Accès rapide aux sections
+- **Design Responsive** : Optimisé pour mobile, tablette et desktop
+- **Présence Internationale** : Bureaux au Cameroun, Dubai et Singapore
+- **Composants Interactifs** : Menu mobile animé, accordéon FAQ, effets de survol
 
 ## 👥 Auteurs
 
-- **Ma'a Suh Team** - Conception & Stratégie
 - **Raoul Flypsid** - Architecture & Développement ([rfx.life](https://rfx.life))
+
+## 📧 Contact
+
+- **Email** : contact@rfx.life
+- **GitHub** : [github.com/flypsid](https://github.com/flypsid)
+- **Twitter/X** : [@flypsid](https://twitter.com/flypsid)
+- **LinkedIn** : [linkedin.com/in/flypsid](https://linkedin.com/in/flypsid)
 
 ## 📄 Licence
 
-Ce projet est la propriété exclusive de Ma'a Suh LLC.
+Ce projet est la propriété exclusive de Rfx Studio.

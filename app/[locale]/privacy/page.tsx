@@ -152,10 +152,10 @@ export default function PrivacyPage() {
             <p className="text-slate-600">
               {t("rights.contact")}{" "}
               <a
-                href="mailto:contact@maasuh.com"
+                href="mailto:contact@rfx.life"
                 className="text-emerald-600 hover:text-emerald-700 transition-colors font-medium"
               >
-                contact@maasuh.com
+                contact@rfx.life
               </a>
             </p>
           </section>

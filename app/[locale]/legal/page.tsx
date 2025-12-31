@@ -55,7 +55,7 @@ export default function LegalPage() {
               <div>
                 <p className="text-sm text-slate-500">{t("editor.email")}</p>
                 <a
-                  href="mailto:contact@maasuh.com"
+                  href="mailto:contact@rfx.life"
                   className="text-emerald-600 hover:text-emerald-700 transition-colors"
                 >
                   {t("editor.emailValue")}
@@ -74,25 +74,11 @@ export default function LegalPage() {
                 {t("directors.title")}
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-slate-600">
+            <div className="text-slate-600">
               <div>
                 <p className="text-sm text-slate-500">{t("directors.ceo")}</p>
                 <p className="font-medium text-slate-800">
                   {t("directors.ceoName")}
-                </p>
-              </div>
-              <div>
-                <p className="text-sm text-slate-500">{t("directors.cto")}</p>
-                <p className="font-medium text-slate-800">
-                  {t("directors.ctoName")}
-                </p>
-              </div>
-              <div>
-                <p className="text-sm text-slate-500">
-                  {t("directors.publication")}
-                </p>
-                <p className="font-medium text-slate-800">
-                  {t("directors.publicationName")}
                 </p>
               </div>
             </div>

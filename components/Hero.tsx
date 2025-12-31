@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { CreditCard, Bot, Store, Zap } from "lucide-react";
+import { CreditCard, Bot, Plane, Zap } from "lucide-react";
 import { SoftButton } from "@/components/ui/SoftButton";
 import { useTranslations } from "next-intl";
 
@@ -122,14 +123,36 @@ export default function MaasuhHero() {
             <Stat label={t("stats.projects")} value="1.2k" />
           </div>
 
-          <div className="mt-6 flex items-center gap-8 opacity-70">
+          <div className="mt-6 flex items-center gap-8">
             <span className="text-xs text-slate-500 uppercase tracking-widest">
               {t("building")}
             </span>
-            <div className="flex items-center gap-6 text-slate-400">
-              <span className="font-semibold">MS PAY</span>
-              <span className="font-semibold">MATHIE</span>
-              <span className="font-semibold">AKO</span>
+            <div className="flex items-center gap-6">
+              <Image
+                src="/images/Viralis-nobg.png"
+                alt="Viralis"
+                width={100}
+                height={32}
+                className="h-8 w-auto object-contain"
+                unoptimized
+              />
+              <Image
+                src="/images/flogo-nobg.png"
+                alt="Fiscally"
+                width={100}
+                height={32}
+                className="h-8 w-auto object-contain"
+                unoptimized
+              />
+
+              <Image
+                src="/images/ResumeiQ.jpg"
+                alt="ResumeIQ Icon"
+                width={32}
+                height={32}
+                className="h-8 w-auto object-contain"
+                unoptimized
+              />
             </div>
           </div>
         </div>
@@ -251,7 +274,7 @@ export default function MaasuhHero() {
             <div className="relative flex h-full flex-col justify-between">
               <div className="flex items-center gap-3">
                 <div className="rounded-full bg-teal-500/40 p-2 ring-1 ring-white/20">
-                  <Store className="h-5 w-5" />
+                  <Plane className="h-5 w-5" />
                 </div>
                 <span className="text-xs uppercase tracking-wider text-teal-100">
                   {t("cards.retail.label")}

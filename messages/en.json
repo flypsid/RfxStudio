@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Ma'a Suh LLC | B2B Digital Innovation Leader",
-    "description": "Ma'a Suh LLC offers innovative digital solutions: Fintech, SaaS, Retail, and Digital Marketing to drive business growth."
+    "title": "Rfx Studio | Web Infrastructure, Ai & Blockchain",
+    "description": "Rfx Studio offers innovative digital solutions: Fintech, SaaS, AI, and Digital Marketing to drive business growth."
   },
   "Navbar": {
     "about": "About",
@@ -15,12 +15,12 @@
     "en": "English"
   },
   "Hero": {
-    "title": "Digital innovation",
-    "titleHighlight": "at the service of your success.",
-    "description": "Fintech, SaaS, Retail and AI: a complete ecosystem to",
-    "descriptionHighlight": "secure your assets",
-    "descriptionEnd": ", optimize your management and automate your growth.",
-    "cta": "About us",
+    "title": "Building Enterprise grade",
+    "titleHighlight": " AI, Web & Blockchain Systems.",
+    "description": "We build the digital backbone that powers modern businesses:",
+    "descriptionHighlight": "scalable platforms",
+    "descriptionEnd": ", intelligent systems and secure transactions.",
+    "cta": "Explore our ecosystem",
     "stats": {
       "experience": "Years of Experience",
       "clients": "Satisfied Clients",
@@ -30,156 +30,145 @@
     "cards": {
       "fintech": {
         "label": "Fintech & Payment",
-        "title": "Payment Solutions",
-        "subtitle": "reliability & innovation"
+        "title": "FusePay: Crypto",
+        "subtitle": "payments made simple"
       },
       "ai": {
         "label": "AI Innovation",
-        "title": "Mathie: Automate",
-        "subtitle": "your social networks"
+        "title": "Viralis: Amplify",
+        "subtitle": "your content strategy"
       },
       "saas": {
         "label": "Management & SaaS",
         "efficiency": "Efficiency",
-        "products": "AKO, CRM, ERP, Facturis"
+        "products": "Fiscally, ResumeIQ, RelayOn"
       },
       "retail": {
-        "label": "Retail & Connectivity",
-        "title": "KONSO & Bantu Com's",
-        "subtitle": "connect your businesses"
+        "label": "Travel & Planning",
+        "title": "Tripmind: Plan",
+        "subtitle": "your dream journeys"
       }
     }
   },
   "About": {
-    "badge": "Why Ma'a Suh?",
-    "title": "Technology designed to",
-    "titleHighlight": "accelerate your success",
-    "description": "We combine technical expertise and business vision to deliver B2B solutions that transform the way you work.",
+    "badge": "Why Rfx Studio?",
+    "title": "Infrastructure built for",
+    "titleHighlight": "scale and reliability",
+    "description": "We engineer robust digital systems that power businesses worldwide, from AI platforms to blockchain solutions.",
     "decorative": {
-      "security": "Advanced Security",
-      "growth": "Continuous Growth",
-      "ai": "Integrated AI",
-      "aiDesc": "Automatic process optimization in real-time."
+      "security": "Enterprise Security",
+      "growth": "Infinite Scale",
+      "ai": "AI-Native",
+      "aiDesc": "Intelligent systems embedded at every layer."
     },
     "features": {
       "innovation": {
-        "title": "Continuous Innovation",
-        "description": "AI-powered tools to stay ahead of the market."
+        "title": "AI-First Architecture",
+        "description": "Machine learning and automation built into our core systems."
       },
       "security": {
-        "title": "Banking-Grade Security",
-        "description": "Certified infrastructure for maximum data protection."
+        "title": "Enterprise Security",
+        "description": "Bank-grade encryption and compliance-ready infrastructure."
       },
       "ecosystem": {
-        "title": "Integrated Ecosystem",
-        "description": "Fintech, SaaS and Retail connected in a single platform."
+        "title": "Unified Platform",
+        "description": "Web, AI and Blockchain services seamlessly integrated."
       },
       "support": {
-        "title": "Dedicated Support",
-        "description": "A team of experts available 24/7 to assist you."
+        "title": "24/7 Support",
+        "description": "Expert engineers available around the clock."
       },
       "scalability": {
-        "title": "Scalability",
-        "description": "Solutions that grow with your business."
+        "title": "Global Scale",
+        "description": "Infrastructure that grows with your ambitions."
       },
       "compliance": {
-        "title": "Simplified Compliance",
-        "description": "Automated management of legal standards and GDPR."
+        "title": "Compliance Ready",
+        "description": "GDPR, SOC2, and industry standards built-in."
       }
     }
   },
   "Solutions": {
-    "badge": "Our Solutions",
-    "title": "A complete ecosystem to",
-    "titleHighlight": "propel your business",
-    "description": "Specialized tools for every aspect of your business, connected and secure.",
-    "discover": "Discover",
+    "badge": "Our Ecosystem",
+    "title": "Products that power",
+    "titleHighlight": "modern digital businesses",
+    "description": "From content intelligence to crypto payments, our platforms are built for scale and performance.",
+    "discover": "Explore",
     "items": {
-      "pay": {
-        "title": "Maasuh E-commerce",
-        "description": "All-in-one SaaS to create and manage your online store."
+      "viralis": {
+        "title": "Viralis",
+        "description": "AI-driven media intelligence platform that helps creators, brands, and marketers amplify their content strategy."
       },
-      "microfinance": {
-        "title": "Anhk School",
-        "description": "School fees management and administrative tracking for institutions."
+      "resumeiq": {
+        "title": "ResumeIQ",
+        "description": "AI-powered resume analysis ensuring your professional profile stands out with intelligent insights and optimization."
       },
-      "crm": {
-        "title": "Ma'a Suh CRM & ERP",
-        "description": "Complete management of your clients and business resources."
+      "relayon": {
+        "title": "RelayOn",
+        "description": "Next-generation AI customer support platform designed to revolutionize how businesses connect with their users."
       },
-      "shop": {
-        "title": "Ma'a Suh Shop & Retail",
-        "description": "Turnkey solution for digital and retail commerce."
+      "fusepay": {
+        "title": "FusePay",
+        "description": "Crypto payment processor offering secure, fast, and borderless transactions for global businesses."
       },
-      "bantu": {
-        "title": "Bantu Com's",
-        "description": "Bulk SMS, emailing and WhatsApp Bulk for your marketing."
+      "fiscally": {
+        "title": "Fiscally",
+        "description": "AI-powered finance management platform for creating invoices, quotes, and managing budgets effortlessly."
       },
-      "aloga": {
-        "title": "ALOGA",
-        "description": "Complete SaaS for rental and property management."
-      },
-      "facturis": {
-        "title": "Facturis",
-        "description": "Intelligent and automated invoicing software."
-      },
-      "mathie": {
-        "title": "Mathie",
-        "description": "AI-powered social media automation."
-      },
-      "ako": {
-        "title": "AKO",
-        "description": "Stock management, POS and hospitality."
-      },
-      "konso": {
-        "title": "KONSO",
-        "description": "The system that connects merchants to suppliers."
+      "tripmind": {
+        "title": "Tripmind",
+        "description": "Your personal AI travel planner mobile app, crafting perfectly tailored itineraries for your dream journeys."
       }
     }
   },
   "Expertise": {
     "badge": "Our Technical Expertise",
-    "title": "Cutting-edge",
-    "titleHighlight": "technological mastery",
-    "description": "We deploy the most advanced technologies to build robust, scalable and secure solutions.",
+    "title": "Deep expertise in",
+    "titleHighlight": "modern technologies",
+    "description": "We leverage cutting-edge technologies to build enterprise-grade AI, Web & Blockchain systems.",
     "items": {
       "dev": {
-        "category": "Development",
-        "title": "Software & Mobile Engineering",
-        "description": "Design of high-performance native web and mobile applications, offering a smooth and intuitive user experience.",
-        "features": ["React / Next.js", "React Native", "TypeScript", "Python"]
+        "category": "Web Development",
+        "title": "Full-Stack Engineering",
+        "description": "Building high-performance web applications with modern frameworks and scalable architectures.",
+        "features": [
+          "Next.js / React",
+          "Node.js",
+          "TypeScript",
+          "REST & GraphQL APIs"
+        ]
       },
       "ai": {
         "category": "Artificial Intelligence",
-        "title": "AI & Data Analytics",
-        "description": "Integration of advanced AI models and data analysis to automate your processes and inform your decisions.",
+        "title": "AI & Machine Learning",
+        "description": "Integrating advanced AI models and intelligent automation into your products and workflows.",
         "features": [
-          "LLM & Chatbots",
-          "Machine Learning",
-          "Predictive Analytics",
-          "Automation"
+          "LLM Integration",
+          "Computer Vision",
+          "NLP & Chatbots",
+          "Predictive Analytics"
         ]
       },
       "cloud": {
         "category": "Infrastructure",
         "title": "Cloud & DevOps",
-        "description": "Resilient cloud architecture and automated deployment pipelines to ensure the availability and scalability of your services.",
+        "description": "Designing resilient cloud architectures and automated pipelines for maximum uptime and scalability.",
         "features": [
-          "AWS / Azure",
+          "AWS / GCP / Azure",
           "Docker & Kubernetes",
-          "CI/CD Pipelines",
-          "Serverless"
+          "CI/CD Automation",
+          "Infrastructure as Code"
         ]
       },
       "security": {
-        "category": "Security",
-        "title": "Cybersecurity & Compliance",
-        "description": "Protection of your digital assets with banking-grade security standards and rigorous regulatory compliance.",
+        "category": "Blockchain",
+        "title": "Web3 & Crypto",
+        "description": "Building secure blockchain solutions, smart contracts, and crypto payment infrastructure.",
         "features": [
-          "Security Audits",
-          "GDPR/PCI Compliance",
-          "End-to-end Encryption",
-          "Identity Management"
+          "Smart Contracts",
+          "DeFi Protocols",
+          "Crypto Payments",
+          "Wallet Integration"
         ]
       }
     }
@@ -190,24 +179,24 @@
     "description": "Find answers to the most common questions about our solutions and services.",
     "items": {
       "integration": {
-        "question": "How do I integrate Ma'a Suh Pay into my e-commerce site?",
-        "answer": "Integration is simple and fast thanks to our robust and well-documented APIs. We also offer ready-to-use plugins for major CMS platforms (WooCommerce, Shopify, Magento). Our technical team is available to assist you throughout the integration phase."
+        "question": "How do I integrate Rfx Studio solutions into my business?",
+        "answer": "Integration is simple and fast thanks to our robust and well-documented APIs. We offer SDKs for major platforms and frameworks. Our technical team is available to assist you throughout the integration phase."
       },
       "security": {
         "question": "What security standards do you apply for data protection?",
-        "answer": "We apply a 'Security by Design' approach. Our infrastructures are ISO 27001 certified and our payment solutions strictly comply with PCI-DSS Level 1. All sensitive data is encrypted end-to-end (AES-256) and we perform regular penetration tests."
+        "answer": "We apply a 'Security by Design' approach. Our infrastructures are enterprise-grade and comply with industry standards. All sensitive data is encrypted end-to-end (AES-256) and we perform regular security audits."
       },
       "support": {
-        "question": "Do you offer local technical support?",
-        "answer": "Yes, we have a dedicated local support team available 24/7 for our Enterprise clients. We believe in proximity to quickly resolve your issues and ensure business continuity."
+        "question": "Do you offer technical support?",
+        "answer": "Yes, we have a dedicated support team available 24/7 for our Enterprise clients. We also offer RelayOn, our AI-powered customer support platform that helps businesses provide instant, intelligent assistance to their users around the clock."
       },
-      "crm": {
-        "question": "What are the benefits of the Ma'a Suh CRM & ERP suite?",
-        "answer": "Our suite is specifically designed for the African context. It unifies management of your clients, inventory, accounting and HR in a single interface. This gives you a 360° view of your business, reduces manual errors and accelerates decision-making."
+      "viralis": {
+        "question": "How does Viralis help with content strategy?",
+        "answer": "Viralis uses AI to analyze media trends and provide actionable insights. It helps creators and marketers understand their audience, optimize content timing, and amplify their reach across platforms."
       },
       "customization": {
-        "question": "Can I customize features according to my needs?",
-        "answer": "Absolutely. While our SaaS solutions are ready to use, our 'Custom Development' team can adapt each module to your company's specific processes or develop exclusive features to give you a competitive advantage."
+        "question": "Can I customize solutions according to my needs?",
+        "answer": "Absolutely. While our platforms are ready to use out of the box, our development team can adapt features to your specific requirements or build custom integrations for your unique workflow."
       }
     }
   },
@@ -218,10 +207,9 @@
     "description": "Our international team is at your disposal to assist you.",
     "offices": {
       "title": "Our offices worldwide",
-      "usa": "Headquarters (USA)",
       "cameroon": "Cameroon",
-      "congo": "Congo",
-      "canada": "Canada"
+      "dubai": "Dubai (UAE)",
+      "singapore": "Singapore"
     },
     "form": {
       "title": "Send us a message",
@@ -238,14 +226,14 @@
     }
   },
   "Footer": {
-    "tagline": "Digital innovation at the service of your success. Fintech, Retail and SaaS solutions for Africa and the world.",
-    "solutions": "Solutions",
+    "tagline": "Building enterprise-grade AI, Web & Blockchain systems that power modern digital businesses worldwide.",
+    "solutions": "Products",
     "solutionsLinks": {
-      "pay": "Ma'a Suh Pay",
-      "microfinance": "Microfinance SaaS",
-      "retail": "Retail & POS",
-      "crm": "CRM & ERP",
-      "ai": "Artificial Intelligence"
+      "viralis": "Viralis",
+      "resumeiq": "ResumeIQ",
+      "fusepay": "FusePay",
+      "fiscally": "Fiscally",
+      "tripmind": "Tripmind"
     },
     "company": "Company",
     "companyLinks": {
@@ -260,7 +248,7 @@
       "placeholder": "Your email",
       "subscribe": "Subscribe"
     },
-    "copyright": "Ma'a Suh LLC. All rights reserved.",
+    "copyright": "Rfx Studio. All rights reserved.",
     "legal": "Legal Notice",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -271,21 +259,17 @@
     "lastUpdate": "Last updated",
     "editor": {
       "title": "Site Editor",
-      "company": "Ma'a Suh LLC",
-      "form": "Limited Liability Company (LLC)",
+      "company": "Rfx Studio",
+      "form": "Digital Innovation Studio",
       "headquarters": "Headquarters",
-      "address": "United States",
+      "address": "Cameroon / Dubai / Singapore",
       "email": "Email",
-      "emailValue": "contact@maasuh.com"
+      "emailValue": "contact@rfx.life"
     },
     "directors": {
       "title": "Management",
       "ceo": "CEO Founder",
-      "ceoName": "Narcisse Fokou",
-      "cto": "CTO Co-founder",
-      "ctoName": "Fokou Donald",
-      "publication": "Publication Director",
-      "publicationName": "Narcisse Fokou"
+      "ceoName": "Raoul Flypsid"
     },
     "hosting": {
       "title": "Hosting",
@@ -298,13 +282,13 @@
     },
     "liability": {
       "title": "Limitation of Liability",
-      "content": "Ma'a Suh LLC strives to provide accurate and up-to-date information on this site. However, we cannot guarantee the accuracy, completeness or timeliness of the information provided. Use of information from the site is at the user's sole risk."
+      "content": "Rfx Studio strives to provide accurate and up-to-date information on this site. However, we cannot guarantee the accuracy, completeness or timeliness of the information provided. Use of information from the site is at the user's sole risk."
     }
   },
   "Privacy": {
     "title": "Privacy Policy",
     "lastUpdate": "Last updated",
-    "intro": "Ma'a Suh LLC is committed to protecting the privacy of its users. This policy explains how we collect, use and protect your personal data.",
+    "intro": "Rfx Studio is committed to protecting the privacy of its users. This policy explains how we collect, use and protect your personal data.",
     "collection": {
       "title": "Data Collected",
       "content": "We collect the following data:",
@@ -359,7 +343,7 @@
     "intro": "By accessing this site, you accept these terms of use. If you do not accept these terms, please do not use this site.",
     "object": {
       "title": "Purpose of the Site",
-      "content": "This site aims to present Ma'a Suh LLC and its innovative digital solutions (Fintech, SaaS, Retail, AI). It is a showcase site intended to inform visitors about our services."
+      "content": "This site aims to present Rfx Studio and its innovative digital solutions (AI, Web, Blockchain). It is a showcase site intended to inform visitors about our services."
     },
     "access": {
       "title": "Access to the Site",
@@ -367,19 +351,19 @@
     },
     "intellectual": {
       "title": "Intellectual Property",
-      "content": "All elements of the site (texts, images, logos, icons, sounds, software, etc.) are the exclusive property of Ma'a Suh LLC or its partners. Any reproduction, representation, modification, publication or adaptation is prohibited without prior authorization."
+      "content": "All elements of the site (texts, images, logos, icons, sounds, software, etc.) are the exclusive property of Rfx Studio or its partners. Any reproduction, representation, modification, publication or adaptation is prohibited without prior authorization."
     },
     "liability": {
       "title": "Limitation of Liability",
-      "content": "Ma'a Suh LLC cannot be held responsible for direct or indirect damages resulting from access to or use of the site, including inaccessibility, data loss, intrusions or viruses."
+      "content": "Rfx Studio cannot be held responsible for direct or indirect damages resulting from access to or use of the site, including inaccessibility, data loss, intrusions or viruses."
     },
     "links": {
       "title": "External Links",
-      "content": "This site may contain links to third-party sites. Ma'a Suh LLC has no control over these sites and disclaims any responsibility for their content."
+      "content": "This site may contain links to third-party sites. Rfx Studio has no control over these sites and disclaims any responsibility for their content."
     },
     "modification": {
       "title": "Modification of Terms",
-      "content": "Ma'a Suh LLC reserves the right to modify these terms at any time. Modifications take effect upon publication on the site."
+      "content": "Rfx Studio reserves the right to modify these terms at any time. Modifications take effect upon publication on the site."
     },
     "law": {
       "title": "Applicable Law",

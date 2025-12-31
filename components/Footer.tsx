@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useActionState, useEffect } from "react";
-import { Linkedin, Facebook, ArrowRight, Loader2 } from "lucide-react";
+import { Linkedin, Github, ArrowRight, Loader2 } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -39,20 +39,25 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
               <Image
-                src="/images/Logo1000x1000.png"
-                alt="Ma'a Suh Logo"
+                src="/images/Rfxstudio.png"
+                alt="Rfx Studio"
                 width={180}
                 height={60}
-                className="h-10 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
-              <span className="text-xl font-bold text-white">
-                Ma&apos;a Suh
-              </span>
             </Link>
             <p className="text-sm leading-relaxed mb-6">{t("tagline")}</p>
             <div className="flex gap-4">
               <a
-                href="https://x.com/"
+                href="https://github.com/flypsid"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-8 w-8 flex items-center justify-center rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white transition-all text-slate-400"
+              >
+                <Github className="h-4 w-4" />
+              </a>
+              <a
+                href="https://twitter.com/flypsid"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-8 w-8 flex items-center justify-center rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white transition-all text-slate-400"
@@ -66,20 +71,12 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/company/maasuhllc"
+                href="https://linkedin.com/in/flypsid"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-8 w-8 flex items-center justify-center rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white transition-all text-slate-400"
               >
                 <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                href="https://www.facebook.com/maasuhllc/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-8 w-8 flex items-center justify-center rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white transition-all text-slate-400"
-              >
-                <Facebook className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -90,10 +87,22 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li>
                 <a
-                  href="#solutions"
+                  href="https://viralis.media/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  {t("solutionsLinks.pay")}
+                  {t("solutionsLinks.viralis")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://resume.rfx.life/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  {t("solutionsLinks.resumeiq")}
                 </a>
               </li>
               <li>
@@ -101,7 +110,7 @@ export default function Footer() {
                   href="#solutions"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  {t("solutionsLinks.microfinance")}
+                  {t("solutionsLinks.fusepay")}
                 </a>
               </li>
               <li>
@@ -109,7 +118,7 @@ export default function Footer() {
                   href="#solutions"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  {t("solutionsLinks.retail")}
+                  {t("solutionsLinks.fiscally")}
                 </a>
               </li>
               <li>
@@ -117,15 +126,7 @@ export default function Footer() {
                   href="#solutions"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  {t("solutionsLinks.crm")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#solutions"
-                  className="hover:text-emerald-400 transition-colors"
-                >
-                  {t("solutionsLinks.ai")}
+                  {t("solutionsLinks.tripmind")}
                 </a>
               </li>
             </ul>

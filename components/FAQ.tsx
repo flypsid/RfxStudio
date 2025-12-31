@@ -5,13 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-type FaqKey = "integration" | "security" | "support" | "crm" | "customization";
+type FaqKey =
+  | "integration"
+  | "security"
+  | "support"
+  | "viralis"
+  | "customization";
 
 const faqKeys: FaqKey[] = [
   "integration",
   "security",
   "support",
-  "crm",
+  "viralis",
   "customization",
 ];
 

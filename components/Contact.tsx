@@ -10,7 +10,7 @@ import {
   User,
   Smartphone,
   Linkedin,
-  Facebook,
+  Github,
   Loader2,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -68,43 +68,10 @@ export default function Contact() {
                 <div>
                   <h4 className="flex items-center gap-2 font-bold text-emerald-700 mb-3">
                     <Image
-                      src="https://flagcdn.com/w40/us.png"
-                      width={28}
-                      height={21}
-                      alt="USA"
-                      className="rounded-sm object-cover"
-                    />
-                    {t("offices.usa")}
-                  </h4>
-                  <div className="pl-8 space-y-1.5 text-sm md:text-base text-slate-600">
-                    <p className="flex items-start gap-2">
-                      <MapPin className="h-4 w-4 mt-1 text-slate-400 shrink-0" />
-                      1021 E Lincolnway Suite 8794, Cheyenne, Wyoming, 82001
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +1 (307)
-                      412-1850
-                    </p>
-                    <div className="flex flex-wrap gap-4 text-xs font-medium text-slate-500 mt-2">
-                      <span className="px-2 py-1 bg-white rounded border">
-                        EIN: 35-2912218
-                      </span>
-                      <span className="px-2 py-1 bg-white rounded border">
-                        D-U-N-S: 14-016-6632
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="h-px bg-slate-200"></div>
-
-                <div>
-                  <h4 className="flex items-center gap-2 font-bold text-emerald-700 mb-3">
-                    <Image
                       src="https://flagcdn.com/w40/cm.png"
                       width={28}
                       height={21}
-                      alt="Cameroun"
+                      alt="Cameroon"
                       className="rounded-sm object-cover"
                     />
                     {t("offices.cameroon")}
@@ -112,11 +79,11 @@ export default function Contact() {
                   <div className="pl-8 space-y-1.5 text-sm md:text-base text-slate-600">
                     <p className="flex items-start gap-2">
                       <MapPin className="h-4 w-4 mt-1 text-slate-400 shrink-0" />
-                      73 Rue LT0003DO5, Douala V, 21105
+                      12 Boulevard Omnispore, Yaounde, Cameroon
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +237 677 349
-                      448
+                      <Phone className="h-4 w-4 text-slate-400" /> +237 6 96 27
+                      52 99
                     </p>
                   </div>
                 </div>
@@ -126,22 +93,22 @@ export default function Contact() {
                 <div>
                   <h4 className="flex items-center gap-2 font-bold text-emerald-700 mb-3">
                     <Image
-                      src="https://flagcdn.com/w40/cg.png"
+                      src="https://flagcdn.com/w40/ae.png"
                       width={28}
                       height={21}
-                      alt="Congo"
+                      alt="Dubai"
                       className="rounded-sm object-cover"
                     />
-                    {t("offices.congo")}
+                    {t("offices.dubai")}
                   </h4>
                   <div className="pl-8 space-y-1.5 text-sm md:text-base text-slate-600">
                     <p className="flex items-start gap-2">
                       <MapPin className="h-4 w-4 mt-1 text-slate-400 shrink-0" />
-                      Av. du Cardinal Émile Biayenda (P6CP+XW5), Brazzaville
+                      Business Bay, Tower 1, Dubai, UAE
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +242 06 692
-                      8047
+                      <Phone className="h-4 w-4 text-slate-400" /> +971 4 301
+                      6560
                     </p>
                   </div>
                 </div>
@@ -151,26 +118,21 @@ export default function Contact() {
                 <div>
                   <h4 className="flex items-center gap-2 font-bold text-emerald-700 mb-3">
                     <Image
-                      src="https://flagcdn.com/w40/ca.png"
+                      src="https://flagcdn.com/w40/sg.png"
                       width={28}
                       height={21}
-                      alt="Canada"
+                      alt="Singapore"
                       className="rounded-sm object-cover"
                     />
-                    {t("offices.canada")}
+                    {t("offices.singapore")}
                   </h4>
                   <div className="pl-8 space-y-1.5 text-sm md:text-base text-slate-600">
                     <p className="flex items-start gap-2">
                       <MapPin className="h-4 w-4 mt-1 text-slate-400 shrink-0" />
-                      26 Avenue de l&apos;Europe, 62250 Leulinghen-Bernes
+                      1 Raffles Place, Tower 2, Singapore 048616
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +1 (438)
-                      824-9359
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Mail className="h-4 w-4 text-slate-400" />{" "}
-                      canada@maasuh.com
+                      <Phone className="h-4 w-4 text-slate-400" /> +65 6688 8660
                     </p>
                   </div>
                 </div>
@@ -180,16 +142,27 @@ export default function Contact() {
             <div className="mt-10 pt-8 border-t border-slate-200">
               <div className="flex flex-col md:flex-row gap-6 md:items-center text-sm">
                 <a
-                  href="mailto:contact@maasuh.com"
+                  href="mailto:contact@rfx.life"
                   className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 transition-colors"
                 >
                   <div className="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
                     <Mail className="h-4 w-4" />
                   </div>
-                  contact@maasuh.com
+                  contact@rfx.life
                 </a>
                 <a
-                  href="https://x.com/"
+                  href="https://github.com/flypsid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 transition-colors"
+                >
+                  <div className="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                    <Github className="h-4 w-4" />
+                  </div>
+                  GitHub
+                </a>
+                <a
+                  href="https://twitter.com/flypsid"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 transition-colors"
@@ -206,7 +179,7 @@ export default function Contact() {
                   X
                 </a>
                 <a
-                  href="https://linkedin.com/company/maasuhllc"
+                  href="https://linkedin.com/in/flypsid"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 transition-colors"
@@ -215,17 +188,6 @@ export default function Contact() {
                     <Linkedin className="h-4 w-4" />
                   </div>
                   LinkedIn
-                </a>
-                <a
-                  href="https://www.facebook.com/maasuhllc/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 transition-colors"
-                >
-                  <div className="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                    <Facebook className="h-4 w-4" />
-                  </div>
-                  Facebook
                 </a>
               </div>
             </div>

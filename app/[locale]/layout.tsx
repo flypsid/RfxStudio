@@ -34,7 +34,7 @@ export async function generateMetadata({
     title: metadata.title,
     description: metadata.description,
     icons: {
-      icon: "/images/Logo1000x1000.png",
+      icon: "/images/RF.jpg",
     },
     alternates: {
       canonical: `/${locale}`,
