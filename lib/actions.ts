@@ -26,7 +26,7 @@ export async function submitContactForm(
     return {
       success: false,
       errors: validatedFields.error.flatten().fieldErrors,
-      message: "Veuillez vérifier les champs du formulaire.",
+      message: "Please check the form fields.",
     };
   }
 
@@ -34,11 +34,11 @@ export async function submitContactForm(
 
   // Format message for Telegram
   const telegramMessage = `
-📣 <b>Nouveau Contact Site Web</b>
+📣 <b>New Website Contact</b>
 
-👤 <b>Nom:</b> ${name}
+👤 <b>Name:</b> ${name}
 📧 <b>Email:</b> ${email}
-📱 <b>Tél:</b> ${phone || "Non renseigné"}
+📱 <b>Phone:</b> ${phone || "Not provided"}
 
 📝 <b>Message:</b>
 ${message}
@@ -49,14 +49,13 @@ ${message}
   if (!sent) {
     return {
       success: false,
-      message:
-        "Erreur lors de l'envoi du message. Veuillez réessayer plus tard.",
+      message: "Error sending message. Please try again later.",
     };
   }
 
   return {
     success: true,
-    message: "Message envoyé avec succès !",
+    message: "Message sent successfully!",
   };
 }
 
@@ -74,7 +73,7 @@ export async function subscribeNewsletter(
     return {
       success: false,
       errors: validatedFields.error.flatten().fieldErrors,
-      message: "Email invalide.",
+      message: "Invalid email.",
     };
   }
 
@@ -82,7 +81,7 @@ export async function subscribeNewsletter(
 
   // Format message for Telegram
   const telegramMessage = `
-📰 <b>Nouvel Abonné Newsletter</b>
+📰 <b>New Newsletter Subscriber</b>
 
 📧 <b>Email:</b> ${email}
 `;
@@ -92,12 +91,12 @@ export async function subscribeNewsletter(
   if (!sent) {
     return {
       success: false,
-      message: "Erreur lors de l'inscription.",
+      message: "Subscription failed.",
     };
   }
 
   return {
     success: true,
-    message: "Inscription confirmée !",
+    message: "Subscription confirmed!",
   };
 }
