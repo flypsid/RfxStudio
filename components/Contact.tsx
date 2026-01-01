@@ -118,21 +118,22 @@ export default function Contact() {
                 <div>
                   <h4 className="flex items-center gap-2 font-bold text-emerald-700 mb-3">
                     <Image
-                      src="https://flagcdn.com/w40/sg.png"
+                      src="https://flagcdn.com/w40/tn.png"
                       width={28}
                       height={21}
-                      alt="Singapore"
+                      alt="Tunis"
                       className="rounded-sm object-cover"
                     />
-                    {t("offices.singapore")}
+                    {t("offices.tunis")}
                   </h4>
                   <div className="pl-8 space-y-1.5 text-sm md:text-base text-slate-600">
                     <p className="flex items-start gap-2">
                       <MapPin className="h-4 w-4 mt-1 text-slate-400 shrink-0" />
-                      1 Raffles Place, Tower 2, Singapore 048616
+                      Rue Omar Kaddeh imm le montplaisir
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +65 6688 8660
+                      <Phone className="h-4 w-4 text-slate-400" /> +216 24 11 56
+                      35
                     </p>
                   </div>
                 </div>
