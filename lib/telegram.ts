@@ -26,7 +26,7 @@ export async function sendTelegramNotification(
       },
       body: JSON.stringify({
         chat_id: chatId,
-        text: message,
+        text: `🚀 <b>Source: RfxStudio</b>\n\n${message}`,
         parse_mode: "HTML",
       }),
       signal: controller.signal,
