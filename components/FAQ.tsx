@@ -25,7 +25,7 @@ export default function FAQ() {
   const t = useTranslations("FAQ");
 
   const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
+    setActiveIndex((prev) => (prev === index ? null : index));
   };
 
   return (
@@ -74,7 +74,7 @@ export default function FAQ() {
               </button>
 
               <AnimatePresence>
-                {activeIndex === index && (
+                {activeIndex === index ? (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
@@ -85,7 +85,7 @@ export default function FAQ() {
                       <div className="pt-4">{t(`items.${key}.answer`)}</div>
                     </div>
                   </motion.div>
-                )}
+                ) : null}
               </AnimatePresence>
             </div>
           ))}

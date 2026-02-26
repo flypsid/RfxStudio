@@ -1,5 +1,6 @@
 import { Toaster } from "sonner";
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,6 +9,13 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 type Props = {
   children: React.ReactNode;
@@ -62,7 +70,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className="antialiased">
+      <body className={`${jakarta.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}

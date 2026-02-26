@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useActionState, useEffect } from "react";
+import React, { useActionState, useEffect, useRef } from "react";
 import { Linkedin, Github, ArrowRight, Loader2 } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -18,18 +18,21 @@ export default function Footer() {
   const t = useTranslations("Footer");
   const [state, formAction, isPending] = useActionState(
     subscribeNewsletter,
-    initialState
+    initialState,
   );
 
+  const prevMessageRef = useRef("");
+
   useEffect(() => {
-    if (state.message) {
+    if (state.message && state.message !== prevMessageRef.current) {
+      prevMessageRef.current = state.message;
       if (state.success) {
         toast.success(state.message);
       } else {
         toast.error(state.message);
       }
     }
-  }, [state]);
+  }, [state.message, state.success]);
 
   return (
     <footer className="bg-slate-900 pt-16 pb-8 text-slate-400">

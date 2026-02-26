@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useActionState, useEffect } from "react";
+import React, { useActionState, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
   Mail,
@@ -27,18 +27,21 @@ export default function Contact() {
   const t = useTranslations("Contact");
   const [state, formAction, isPending] = useActionState(
     submitContactForm,
-    initialState
+    initialState,
   );
 
+  const prevMessageRef = useRef("");
+
   useEffect(() => {
-    if (state.message) {
+    if (state.message && state.message !== prevMessageRef.current) {
+      prevMessageRef.current = state.message;
       if (state.success) {
         toast.success(state.message);
       } else {
         toast.error(state.message);
       }
     }
-  }, [state]);
+  }, [state.message, state.success]);
 
   return (
     <section id="contact" className="py-12 md:py-24 bg-white">

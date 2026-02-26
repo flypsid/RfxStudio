@@ -8,21 +8,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
+const navItems = [
+  { key: "about", href: "#about" },
+  { key: "solutions", href: "#solutions" },
+  { key: "expertise", href: "#expertise" },
+  { key: "faq", href: "#faq" },
+];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("Navbar");
 
-  const navItems = [
-    { key: "about", href: "#about" },
-    { key: "solutions", href: "#solutions" },
-    { key: "expertise", href: "#expertise" },
-    { key: "faq", href: "#faq" },
-  ];
-
   // Gère le clic sur les liens de navigation (fix pour mobile)
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     setIsOpen(false);
