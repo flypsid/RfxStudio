@@ -3,8 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CreditCard, Bot, Plane, Zap } from "lucide-react";
-import { SoftButton } from "@/components/ui/SoftButton";
+import { CreditCard, Bot, Plane, Zap, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 interface StatProps {
@@ -111,7 +110,13 @@ export default function MaasuhHero() {
           </div>
 
           <div className="flex items-center gap-4">
-            <SoftButton>{t("cta")}</SoftButton>
+            <a
+              href="#expertise"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800 transition-colors cursor-pointer"
+            >
+              {t("cta")}
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
 
           <div className="grid grid-cols-3 gap-8 pt-2 md:max-w-xl">

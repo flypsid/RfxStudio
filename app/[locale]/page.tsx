@@ -22,11 +22,11 @@ export default async function Home({ params }: Props) {
       <section id="about">
         <About />
       </section>
-      <section id="solutions">
-        <Solutions />
-      </section>
       <section id="expertise">
         <Expertise />
+      </section>
+      <section id="solutions">
+        <Solutions />
       </section>
       <section id="faq">
         <FAQ />

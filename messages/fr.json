@@ -20,7 +20,7 @@
     "description": "Nous construisons le socle numérique des entreprises modernes :",
     "descriptionHighlight": "plateformes scalables",
     "descriptionEnd": ", systèmes intelligents et transactions sécurisées.",
-    "cta": "Explorer notre écosystème",
+    "cta": "Découvrir notre expertise",
     "stats": {
       "experience": "Années d'Expérience",
       "clients": "Clients Satisfaits",
@@ -178,6 +178,18 @@
     "title": "Questions Fréquentes",
     "description": "Retrouvez les réponses aux questions les plus courantes sur nos solutions et services.",
     "items": {
+      "process": {
+        "question": "Quel est votre processus de développement pour un projet sur mesure ?",
+        "answer": "Nous suivons une méthodologie en 5 étapes : (1) Découverte & cadrage de votre besoin, (2) Architecture technique & conception UX/UI, (3) Développement Agile par sprints de 2 semaines avec des démonstrations régulières, (4) Tests, recette & déploiement, (5) Support post-livraison et itérations. Vous êtes impliqué à chaque étape."
+      },
+      "mvp": {
+        "question": "Combien de temps faut-il pour livrer un MVP ?",
+        "answer": "Un MVP (Produit Minimum Viable) se livre généralement entre 4 et 8 semaines selon la complexité fonctionnelle. Nous commençons par un atelier de cadrage pour définir le périmètre minimal qui apporte de la valeur à vos utilisateurs, puis nous itérons pour ajouter des fonctionnalités."
+      },
+      "ownership": {
+        "question": "Qui possède le code source une fois le projet livré ?",
+        "answer": "Vous êtes propriétaire exclusif du code source livré. Nous travaillons sur votre dépôt Git (ou vous le transférons) et vous remettons toute la documentation technique. Aucune licence restrictive : le code est à vous."
+      },
       "integration": {
         "question": "Comment intégrer les solutions Rfx Studio à mon entreprise ?",
         "answer": "L'intégration est simple et rapide grâce à nos API robustes et bien documentées. Nous proposons des SDKs pour les principales plateformes et frameworks. Notre équipe technique est disponible pour vous assister durant toute la phase d'intégration."

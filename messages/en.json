@@ -20,7 +20,7 @@
     "description": "We build the digital backbone that powers modern businesses:",
     "descriptionHighlight": "scalable platforms",
     "descriptionEnd": ", intelligent systems and secure transactions.",
-    "cta": "Explore our ecosystem",
+    "cta": "Discover our expertise",
     "stats": {
       "experience": "Years of Experience",
       "clients": "Satisfied Clients",
@@ -178,6 +178,18 @@
     "title": "Frequently Asked Questions",
     "description": "Find answers to the most common questions about our solutions and services.",
     "items": {
+      "process": {
+        "question": "What is your development process for a custom project?",
+        "answer": "We follow a 5-step methodology: (1) Discovery & scoping of your needs, (2) Technical architecture & UX/UI design, (3) Agile development in 2-week sprints with regular demos, (4) Testing, acceptance & deployment, (5) Post-delivery support and iterations. You are involved at every stage."
+      },
+      "mvp": {
+        "question": "How long does it take to deliver an MVP?",
+        "answer": "An MVP (Minimum Viable Product) is typically delivered between 4 and 8 weeks depending on functional complexity. We start with a scoping workshop to define the minimal scope that brings value to your users, then iterate to add features."
+      },
+      "ownership": {
+        "question": "Who owns the source code once the project is delivered?",
+        "answer": "You are the exclusive owner of the delivered source code. We work on your Git repository (or transfer it to you) and provide all technical documentation. No restrictive license: the code is yours."
+      },
       "integration": {
         "question": "How do I integrate Rfx Studio solutions into my business?",
         "answer": "Integration is simple and fast thanks to our robust and well-documented APIs. We offer SDKs for major platforms and frameworks. Our technical team is available to assist you throughout the integration phase."

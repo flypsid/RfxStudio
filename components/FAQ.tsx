@@ -6,17 +6,21 @@ import { Plus, Minus } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 type FaqKey =
+  | "process"
+  | "mvp"
+  | "ownership"
   | "integration"
   | "security"
   | "support"
-  | "viralis"
   | "customization";
 
 const faqKeys: FaqKey[] = [
+  "process",
+  "mvp",
+  "ownership",
   "integration",
   "security",
   "support",
-  "viralis",
   "customization",
 ];
 

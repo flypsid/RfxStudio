@@ -10,8 +10,8 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const navItems = [
   { key: "about", href: "#about" },
-  { key: "solutions", href: "#solutions" },
   { key: "expertise", href: "#expertise" },
+  { key: "solutions", href: "#solutions" },
   { key: "faq", href: "#faq" },
 ];
 
@@ -67,7 +67,7 @@ export default function Navbar() {
         {/* Desktop CTA + Language Switcher */}
         <div className="hidden items-center gap-4 md:flex">
           <LanguageSwitcher />
-          <a href="#contact">
+          <a href="#contact" className="cursor-pointer">
             <SoftButton>{t("contact")}</SoftButton>
           </a>
         </div>
@@ -108,6 +108,7 @@ export default function Navbar() {
                 <a
                   href="#contact"
                   onClick={(e) => handleNavClick(e, "#contact")}
+                  className="cursor-pointer"
                 >
                   <SoftButton>{t("contact")}</SoftButton>
                 </a>
