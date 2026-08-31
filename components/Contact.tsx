@@ -1,7 +1,4 @@
-"use client";
-
-import React, { useActionState, useEffect, useRef } from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import {
   Mail,
   Phone,
@@ -13,35 +10,43 @@ import {
   Github,
   Loader2,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { submitContactForm } from "@/lib/actions";
+import { useTranslations } from "@/src/lib/i18n";
+import { submitContactFn } from "@/src/lib/serverFns";
 import { toast } from "sonner";
-
-const initialState = {
-  success: false,
-  message: "",
-  errors: {},
-};
 
 export default function Contact() {
   const t = useTranslations("Contact");
-  const [state, formAction, isPending] = useActionState(
-    submitContactForm,
-    initialState,
-  );
+  const [isPending, setIsPending] = useState(false);
 
-  const prevMessageRef = useRef("");
-
-  useEffect(() => {
-    if (state.message && state.message !== prevMessageRef.current) {
-      prevMessageRef.current = state.message;
-      if (state.success) {
-        toast.success(state.message);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsPending(true);
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: String(formData.get("name") || ""),
+      email: String(formData.get("email") || ""),
+      phone: String(formData.get("phone") || ""),
+      message: String(formData.get("message") || ""),
+    };
+    try {
+      const result = await submitContactFn({ data });
+      if (result.success) {
+        toast.success(result.message || "Message sent successfully!");
+        (e.target as HTMLFormElement).reset();
       } else {
-        toast.error(state.message);
+        if (result.errors) {
+          const firstError = Object.values(result.errors).flat()[0];
+          toast.error(firstError || result.message || "Please check the form fields.");
+        } else {
+          toast.error(result.message || "Error sending message.");
+        }
       }
+    } catch (err) {
+      toast.error("Error sending message. Please try again later.");
+    } finally {
+      setIsPending(false);
     }
-  }, [state.message, state.success]);
+  };
 
   return (
     <section id="contact" className="py-12 md:py-24 bg-white">
@@ -70,7 +75,7 @@ export default function Contact() {
               <div className="space-y-8">
                 <div>
                   <h4 className="flex items-center gap-2 font-bold text-emerald-700 mb-3">
-                    <Image
+                    <img
                       src="https://flagcdn.com/w40/cm.png"
                       width={28}
                       height={21}
@@ -85,8 +90,7 @@ export default function Contact() {
                       12 Boulevard Omnispore, Yaounde, Cameroon
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +237 6 96 27
-                      52 99
+                      <Phone className="h-4 w-4 text-slate-400" /> +237 6 96 27 52 99
                     </p>
                   </div>
                 </div>
@@ -95,7 +99,7 @@ export default function Contact() {
 
                 <div>
                   <h4 className="flex items-center gap-2 font-bold text-emerald-700 mb-3">
-                    <Image
+                    <img
                       src="https://flagcdn.com/w40/ae.png"
                       width={28}
                       height={21}
@@ -110,8 +114,7 @@ export default function Contact() {
                       Business Bay, Tower 1, Dubai, UAE
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +971 4 301
-                      6560
+                      <Phone className="h-4 w-4 text-slate-400" /> +971 4 301 6560
                     </p>
                   </div>
                 </div>
@@ -120,7 +123,7 @@ export default function Contact() {
 
                 <div>
                   <h4 className="flex items-center gap-2 font-bold text-emerald-700 mb-3">
-                    <Image
+                    <img
                       src="https://flagcdn.com/w40/tn.png"
                       width={28}
                       height={21}
@@ -135,8 +138,7 @@ export default function Contact() {
                       Rue Omar Kaddeh imm le montplaisir
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +216 24 11 56
-                      35
+                      <Phone className="h-4 w-4 text-slate-400" /> +216 24 11 56 35
                     </p>
                   </div>
                 </div>
@@ -172,11 +174,7 @@ export default function Contact() {
                   className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 transition-colors"
                 >
                   <div className="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                    <svg
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                      className="h-4 w-4 fill-current"
-                    >
+                    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
                       <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
                     </svg>
                   </div>
@@ -199,23 +197,17 @@ export default function Contact() {
 
           {/* Form Column */}
           <div className="flex flex-col h-full bg-emerald-900 rounded-3xl p-8 md:p-10 text-white relative overflow-hidden">
-            {/* Abstract Background Shapes */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-emerald-800 rounded-full opacity-20 blur-3xl"></div>
             <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-60 h-60 bg-teal-600 rounded-full opacity-20 blur-3xl"></div>
 
             <div className="relative z-10 flex flex-col h-full">
               <h3 className="text-2xl font-semibold mb-2">{t("form.title")}</h3>
-              <p className="text-emerald-100 mb-8 text-sm">
-                {t("form.subtitle")}
-              </p>
+              <p className="text-emerald-100 mb-8 text-sm">{t("form.subtitle")}</p>
 
-              <form action={formAction} className="flex flex-col gap-4 grow">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4 grow">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label
-                      htmlFor="name"
-                      className="text-xs font-medium text-emerald-200 ml-1"
-                    >
+                    <label htmlFor="name" className="text-xs font-medium text-emerald-200 ml-1">
                       {t("form.name")}
                     </label>
                     <div className="relative">
@@ -232,10 +224,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="space-y-1.5">
-                    <label
-                      htmlFor="phone"
-                      className="text-xs font-medium text-emerald-200 ml-1"
-                    >
+                    <label htmlFor="phone" className="text-xs font-medium text-emerald-200 ml-1">
                       {t("form.phone")}
                     </label>
                     <div className="relative">
@@ -253,10 +242,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label
-                    htmlFor="email"
-                    className="text-xs font-medium text-emerald-200 ml-1"
-                  >
+                  <label htmlFor="email" className="text-xs font-medium text-emerald-200 ml-1">
                     {t("form.email")}
                   </label>
                   <div className="relative">
@@ -274,10 +260,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1.5 grow flex flex-col">
-                  <label
-                    htmlFor="message"
-                    className="text-xs font-medium text-emerald-200 ml-1"
-                  >
+                  <label htmlFor="message" className="text-xs font-medium text-emerald-200 ml-1">
                     {t("form.message")}
                   </label>
                   <textarea
@@ -296,9 +279,7 @@ export default function Contact() {
                   className="mt-4 w-full bg-white text-emerald-900 font-bold py-3 px-6 rounded-xl hover:bg-emerald-50 transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {isPending ? (
-                    <>
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                    </>
+                    <Loader2 className="h-4 w-4 animate-spin" />
                   ) : (
                     <>
                       {t("form.submit")}

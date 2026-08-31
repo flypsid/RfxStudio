@@ -7,7 +7,7 @@ import {
   FileCheck,
   LucideIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/src/lib/i18n";
 
 type FeatureKey =
   | "innovation"

@@ -1,11 +1,8 @@
-"use client";
-
 import React, { useState } from "react";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { SoftButton } from "@/components/ui/SoftButton";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/src/lib/i18n";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const navItems = [
@@ -19,15 +16,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("Navbar");
 
-  // Gère le clic sur les liens de navigation (fix pour mobile)
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsOpen(false);
-
-    // Petit délai pour permettre au menu de se fermer avant le scroll
     setTimeout(() => {
       const targetId = href.replace("#", "");
       const targetElement = document.getElementById(targetId);
@@ -40,9 +31,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-[#F3F5F7]/80 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-[1180px] items-center justify-between px-4 py-4 xl:px-0 md:py-6">
-        {/* Logo */}
         <a href="./" className="flex items-center gap-3">
-          <Image
+          <img
             src="/images/Rfxstudio.png"
             alt="Rfx Studio"
             width={180}
@@ -51,7 +41,6 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Desktop Menu */}
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <a
@@ -64,7 +53,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA + Language Switcher */}
         <div className="hidden items-center gap-4 md:flex">
           <LanguageSwitcher />
           <a href="#contact" className="cursor-pointer">
@@ -72,7 +60,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="flex items-center gap-3 md:hidden">
           <LanguageSwitcher />
           <button
@@ -84,7 +71,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -105,11 +91,7 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="flex flex-col gap-3 pt-4">
-                <a
-                  href="#contact"
-                  onClick={(e) => handleNavClick(e, "#contact")}
-                  className="cursor-pointer"
-                >
+                <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")} className="cursor-pointer">
                   <SoftButton>{t("contact")}</SoftButton>
                 </a>
               </div>

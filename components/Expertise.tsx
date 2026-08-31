@@ -9,7 +9,7 @@ import {
   CheckCircle2,
   LucideIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/src/lib/i18n";
 
 type ExpertiseKey = "dev" | "ai" | "cloud" | "security";
 

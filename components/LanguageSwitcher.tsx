@@ -1,11 +1,7 @@
-"use client";
-
-import { useLocale, useTranslations } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { useLocale, useTranslations, locales } from "@/src/lib/i18n";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import Image from "next/image";
-import { routing } from "@/i18n/routing";
+import { useNavigate, useRouterState } from "@tanstack/react-router";
 
 const localeFlags: Record<string, string> = {
   fr: "https://flagcdn.com/w40/fr.png",
@@ -15,18 +11,15 @@ const localeFlags: Record<string, string> = {
 export default function LanguageSwitcher() {
   const t = useTranslations("LanguageSwitcher");
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
+  const navigate = useNavigate();
+  const routerState = useRouterState();
+  const pathname = routerState.location.pathname;
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     }
@@ -35,7 +28,15 @@ export default function LanguageSwitcher() {
   }, []);
 
   const handleLocaleChange = (newLocale: string) => {
-    router.replace(pathname, { locale: newLocale });
+    // Replace first segment (/fr or /en) with new locale
+    const segments = pathname.split("/").filter(Boolean);
+    if (segments.length > 0 && (locales as readonly string[]).includes(segments[0])) {
+      segments[0] = newLocale;
+    } else {
+      segments.unshift(newLocale);
+    }
+    const newPath = "/" + segments.join("/");
+    navigate({ to: newPath as any });
     setIsOpen(false);
   };
 
@@ -46,7 +47,7 @@ export default function LanguageSwitcher() {
         className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors text-sm font-medium text-slate-700"
         aria-label="Change language"
       >
-        <Image
+        <img
           src={localeFlags[locale]}
           alt={t(locale as "fr" | "en")}
           width={20}
@@ -54,26 +55,20 @@ export default function LanguageSwitcher() {
           className="rounded-sm object-cover"
         />
         <span>{t(locale as "fr" | "en")}</span>
-        <ChevronDown
-          className={`h-4 w-4 transition-transform ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
+        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
       </button>
 
       {isOpen && (
         <div className="absolute right-0 mt-2 w-36 rounded-lg bg-white shadow-lg ring-1 ring-slate-200 z-50">
-          {routing.locales.map((loc) => (
+          {locales.map((loc) => (
             <button
               key={loc}
               onClick={() => handleLocaleChange(loc)}
               className={`flex items-center gap-2 w-full px-3 py-2.5 text-sm text-left hover:bg-slate-50 first:rounded-t-lg last:rounded-b-lg transition-colors ${
-                locale === loc
-                  ? "bg-emerald-50 text-emerald-700 font-medium"
-                  : "text-slate-600"
+                locale === loc ? "bg-emerald-50 text-emerald-700 font-medium" : "text-slate-600"
               }`}
             >
-              <Image
+              <img
                 src={localeFlags[loc]}
                 alt={t(loc as "fr" | "en")}
                 width={20}

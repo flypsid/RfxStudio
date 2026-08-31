@@ -13,9 +13,15 @@
 # testing
 /coverage
 
-# next.js
+# next.js (legacy)
 /.next/
 /out/
+
+# tanstack start / vite / cloudflare
+/dist/
+/.tanstack/
+.wrangler/
+.dev.vars
 
 # production
 /build
