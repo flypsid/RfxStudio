@@ -103,11 +103,11 @@ Le site supporte **2 langues** avec détection automatique :
 
 ## 👥 Auteurs
 
-- **Raoul Flypsid** - Architecture & Développement ([rfx.life](https://rfx.life))
+- **Raoul Flypsid** - Architecture & Développement ([rfx.lat](https://rfx.lat))
 
 ## 📧 Contact
 
-- **Email** : contact@rfx.life
+- **Email** : contact@rfx.lat
 - **GitHub** : [github.com/flypsid](https://github.com/flypsid)
 - **Twitter/X** : [@flypsid](https://twitter.com/flypsid)
 - **LinkedIn** : [linkedin.com/in/flypsid](https://linkedin.com/in/flypsid)

@@ -11,12 +11,7 @@ import {
 import { useTranslations } from "@/src/lib/i18n";
 
 type SolutionKey =
-  | "viralis"
-  | "resumeiq"
-  | "relayon"
-  | "fusepay"
-  | "fiscally"
-  | "tripmind";
+  "viralis" | "resumeiq" | "relayon" | "fusepay" | "fiscally" | "tripmind";
 
 const solutionIcons: Record<SolutionKey, LucideIcon> = {
   viralis: TrendingUp,
@@ -29,7 +24,7 @@ const solutionIcons: Record<SolutionKey, LucideIcon> = {
 
 const solutionLinks: Record<SolutionKey, string> = {
   viralis: "https://viralis.media/",
-  resumeiq: "https://resume.rfx.life/",
+  resumeiq: "https://resume.rfx.lat/",
   relayon: "#",
   fusepay: "#",
   fiscally: "#",

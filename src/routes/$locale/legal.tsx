@@ -42,17 +42,21 @@ function LegalPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-600">
               <div>
-                <p className="font-medium text-slate-800">{t("editor.company")}</p>
+                <p className="font-medium text-slate-800">
+                  {t("editor.company")}
+                </p>
                 <p className="text-sm">{t("editor.form")}</p>
               </div>
               <div>
-                <p className="text-sm text-slate-500">{t("editor.headquarters")}</p>
+                <p className="text-sm text-slate-500">
+                  {t("editor.headquarters")}
+                </p>
                 <p>{t("editor.address")}</p>
               </div>
               <div>
                 <p className="text-sm text-slate-500">{t("editor.email")}</p>
                 <a
-                  href="mailto:contact@rfx.life"
+                  href="mailto:contact@rfx.lat"
                   className="text-emerald-600 hover:text-emerald-700 transition-colors"
                 >
                   {t("editor.emailValue")}
@@ -73,7 +77,9 @@ function LegalPage() {
             <div className="text-slate-600">
               <div>
                 <p className="text-sm text-slate-500">{t("directors.ceo")}</p>
-                <p className="font-medium text-slate-800">{t("directors.ceoName")}</p>
+                <p className="font-medium text-slate-800">
+                  {t("directors.ceoName")}
+                </p>
               </div>
             </div>
           </section>
@@ -88,7 +94,9 @@ function LegalPage() {
               </h2>
             </div>
             <div className="text-slate-600">
-              <p className="font-medium text-slate-800">{t("hosting.provider")}</p>
+              <p className="font-medium text-slate-800">
+                {t("hosting.provider")}
+              </p>
               <p className="text-sm">{t("hosting.location")}</p>
             </div>
           </section>
@@ -102,7 +110,9 @@ function LegalPage() {
                 {t("intellectual.title")}
               </h2>
             </div>
-            <p className="text-slate-600 leading-relaxed">{t("intellectual.content")}</p>
+            <p className="text-slate-600 leading-relaxed">
+              {t("intellectual.content")}
+            </p>
           </section>
 
           <section className="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-100">
@@ -114,7 +124,9 @@ function LegalPage() {
                 {t("liability.title")}
               </h2>
             </div>
-            <p className="text-slate-600 leading-relaxed">{t("liability.content")}</p>
+            <p className="text-slate-600 leading-relaxed">
+              {t("liability.content")}
+            </p>
           </section>
         </div>
       </div>

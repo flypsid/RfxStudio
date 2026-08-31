@@ -36,7 +36,9 @@ export default function Contact() {
       } else {
         if (result.errors) {
           const firstError = Object.values(result.errors).flat()[0];
-          toast.error(firstError || result.message || "Please check the form fields.");
+          toast.error(
+            firstError || result.message || "Please check the form fields.",
+          );
         } else {
           toast.error(result.message || "Error sending message.");
         }
@@ -90,7 +92,8 @@ export default function Contact() {
                       12 Boulevard Omnispore, Yaounde, Cameroon
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +237 6 96 27 52 99
+                      <Phone className="h-4 w-4 text-slate-400" /> +237 6 96 27
+                      52 99
                     </p>
                   </div>
                 </div>
@@ -114,7 +117,8 @@ export default function Contact() {
                       Business Bay, Tower 1, Dubai, UAE
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +971 4 301 6560
+                      <Phone className="h-4 w-4 text-slate-400" /> +971 4 301
+                      6560
                     </p>
                   </div>
                 </div>
@@ -138,7 +142,8 @@ export default function Contact() {
                       Rue Omar Kaddeh imm le montplaisir
                     </p>
                     <p className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-slate-400" /> +216 24 11 56 35
+                      <Phone className="h-4 w-4 text-slate-400" /> +216 24 11 56
+                      35
                     </p>
                   </div>
                 </div>
@@ -148,13 +153,13 @@ export default function Contact() {
             <div className="mt-10 pt-8 border-t border-slate-200">
               <div className="flex flex-col md:flex-row gap-6 md:items-center text-sm">
                 <a
-                  href="mailto:contact@rfx.life"
+                  href="mailto:contact@rfx.lat"
                   className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 transition-colors"
                 >
                   <div className="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
                     <Mail className="h-4 w-4" />
                   </div>
-                  contact@rfx.life
+                  contact@rfx.lat
                 </a>
                 <a
                   href="https://github.com/flypsid"
@@ -174,7 +179,11 @@ export default function Contact() {
                   className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 transition-colors"
                 >
                   <div className="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
+                    <svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      className="h-4 w-4 fill-current"
+                    >
                       <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
                     </svg>
                   </div>
@@ -202,12 +211,20 @@ export default function Contact() {
 
             <div className="relative z-10 flex flex-col h-full">
               <h3 className="text-2xl font-semibold mb-2">{t("form.title")}</h3>
-              <p className="text-emerald-100 mb-8 text-sm">{t("form.subtitle")}</p>
+              <p className="text-emerald-100 mb-8 text-sm">
+                {t("form.subtitle")}
+              </p>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4 grow">
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-4 grow"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label htmlFor="name" className="text-xs font-medium text-emerald-200 ml-1">
+                    <label
+                      htmlFor="name"
+                      className="text-xs font-medium text-emerald-200 ml-1"
+                    >
                       {t("form.name")}
                     </label>
                     <div className="relative">
@@ -224,7 +241,10 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="space-y-1.5">
-                    <label htmlFor="phone" className="text-xs font-medium text-emerald-200 ml-1">
+                    <label
+                      htmlFor="phone"
+                      className="text-xs font-medium text-emerald-200 ml-1"
+                    >
                       {t("form.phone")}
                     </label>
                     <div className="relative">
@@ -242,7 +262,10 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="email" className="text-xs font-medium text-emerald-200 ml-1">
+                  <label
+                    htmlFor="email"
+                    className="text-xs font-medium text-emerald-200 ml-1"
+                  >
                     {t("form.email")}
                   </label>
                   <div className="relative">
@@ -260,7 +283,10 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1.5 grow flex flex-col">
-                  <label htmlFor="message" className="text-xs font-medium text-emerald-200 ml-1">
+                  <label
+                    htmlFor="message"
+                    className="text-xs font-medium text-emerald-200 ml-1"
+                  >
                     {t("form.message")}
                   </label>
                   <textarea

@@ -55,7 +55,7 @@ export default function LegalPage() {
               <div>
                 <p className="text-sm text-slate-500">{t("editor.email")}</p>
                 <a
-                  href="mailto:contact@rfx.life"
+                  href="mailto:contact@rfx.lat"
                   className="text-emerald-600 hover:text-emerald-700 transition-colors"
                 >
                   {t("editor.emailValue")}
